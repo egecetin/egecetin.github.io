@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+	
+	<!-- Loading Screen -->	
+	<link rel="stylesheet" href="./css/loading_style.css">
+	<div id="preloader" class="loading">
+		<div class="loading-text">
+			<span class="loading-text-words">L</span>
+			<span class="loading-text-words">O</span>
+			<span class="loading-text-words">A</span>
+			<span class="loading-text-words">D</span>
+			<span class="loading-text-words">I</span>
+			<span class="loading-text-words">N</span>
+			<span class="loading-text-words">G</span>
+		</div>
+	</div>
+	
+	<!-- Header -->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Ege Çetin</title>
+		<!-- Bootstrap -->
+		<link href="css/bootstrap-4.3.1.css" rel="stylesheet">
+		<link href="css/main_style.css" rel="stylesheet">
+	</head>
+
+	<!-- Body -->
+	<body>
+		<div class="container; mt-5">
+			<br>
+			<h1 style="font-family:blacksword; src: url(Other_Sources/Blacksword.otf); font-size: 70px" align="center">Welcome!</h1>
+			<div class="removingline"></div>
+		</div>
+
+		<div class="container; mt-5" style="min-height: 300px">
+			<div class="button-container-1" style="background-color: white">
+				<a href="./home.html">
+					<span class="mas"><strong>Home</strong></span>
+					<button onClick="./home.html" id="work-1" type="button" name="Hover"><strong>Home</strong></button>
+				</a>
+			</div>
+			<div class="button-container-1" style="background-color: white">
+				<a href="./projects.html">
+					<span class="mas"><strong>Projects</strong></span>
+					<button id="work-2" type="button" name="Hover"><strong>Projects</strong></button>
+				</a>
+			</div>
+			<div class="button-container-1" style="background-color: white">
+				<a href="./contact.html">
+					<span class="mas"><strong>Contact</strong></span>
+					<button id="work-3" type="button" name="Hover"><strong>Contact</strong></button>
+				</a>
+			</div>
+		</div>
+		
+		<!-- jQuery (For loading screen) -->
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#preloader").addClass("loaded");
+			});
+		</script>
+	</body>
+	
+	<div class="footer">
+		<hr>
+		<footer align="center" style="font-size: 13px; text-align: center"><a style="filter: opacity(0.85)">Dream no small dream. It lacks magic. Dream large. Then make the dream real.<br><strong>Donald Douglas</strong></a>
+		</footer>
+	</div>
+
+</html>

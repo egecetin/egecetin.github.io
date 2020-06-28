@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+	
+	<!-- Header -->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Projects</title>
+		<link href="../css/bootstrap-4.3.1.css" rel="stylesheet">
+		<link href="../css/main_style.css" rel="stylesheet">		
+	</head>
+
+	<!-- Background video -->
+	<video id="vid" width="1920" height="1080" preload="metadata" playsinline autoplay muted loop>
+		<source src="../images/Science-17070.mp4" type="video/mp4">
+	</video>
+	
+	<!-- Body -->
+	<body>		
+		<!-- Top menu -->
+		<div class="container; sticky">
+			<div style="margin-bottom: 3em">
+				<ul class="menu">
+					<li><a href="../home.html">Home</a></li>
+					<li><a href="../projects.html">Projects</a></li>
+					<li><a href="../contact.html">Contact</a></li>
+				</ul>
+				<div class="removingline"></div>
+			</div>
+		</div>
+		
+		
+		
+		<div class="row">
+			<!-- Left Menu -->
+			<div class="col-md-2 col-xs-2 col-lg-2 col-sm-2 sticky_sidebar">
+				<nav class="main-nav" role="navigation">
+					<ul class="unstyled list-hover-slide">
+						<li><a href="./freqdetector.html">Frequency Estimator</a></li>
+						<li><a href="./crypto.html">Cryptography</a></li>
+						<li><a href="./facelike.html">Face-looking Image Recognition</a></li>
+						<!-- <li><a href="./synopsis.html">Video Synopsis</a></li> -->
+						<li><a href="./visualizer.html">Signal Visualizer</a></li>
+						<li><a href="./localization.html">Source Localization</a></li>
+					</ul>
+				</nav>
+				
+				<!-- Clock & Date -->
+				<div id="clock" style="margin-top: 80%">
+					<p class="date">{{ date }}</p>
+					<p class="time">{{ time }}</p>
+				</div>
+				<script src="../js/vue.min.js"></script><script  src="../js/clock_script.js"></script>	
+			</div>
+			
+			<!-- Main -->
+			<div class="col-md-8 col-xs-8 col-lg-8 col-sm-8">
+				<h3 align="center">Cryptography</h3>
+				
+				<br>
+				<p style="text-indent: 5%;">Cryptography is a method for changing or making unreadable the data for security reasons when transmitting or storing. Cryptography is an indispensable requirement for today's communication systems. There are several methods for encryption but cryptosystems can be grouped under the two main titles.</p>
+				
+				<ul>
+					<li>Symmetric cryptosystems</li>
+					<li>Asymmetric cryptosystems</li>
+				</ul>
+				<p style="text-indent: 5%;">Symmetric encryption systems use the same key to encrypt and decrypt data, while asymmetric systems use different keys. AES, Serpent, Twofish and Kuznyechick are the some of examples of symmetric cryptosystems, while some asymmetric cryptosystems are RSA and Elliptic Curve.</p>
+				
+				
+				<br>
+				<h5>Rijndael</h5>
+				<br>
+				
+				<p style="text-indent: 5%;"> Rijndael (known as AES) is a symmetric cryptosytem. Since it is symmetric, AES uses the same key for encryption and decryption and in most cases AES is a preferable secure and high perfomance solution due to the simplicity of mathematical operations.</p>
+				
+				<div class="container" align="center">
+					<img src="../images/aes_scheme.gif" alt="" style="filter: invert(); width: 60%;">
+					<br>
+					<small>Source: https://rsec.kr/</small>
+				</div>
+				
+				<p style="text-indent: 5%;"></p>
+				
+				<p style="text-indent: 5%;">You can find a comic style full explanation of AES encryption and decryption scheme from <a href="http://www.moserware.com/2009/09/stick-figure-guide-to-advanced.html" target="_blank">here</a>.</p>
+				
+				<br>
+				<h5>Rivest Shamir Adleman</h5>
+				<br>
+				
+				<p style="text-indent: 5%;">Rivest-Shamir-Adleman (RSA) is a widely used public-key cryptosystem. It's based on semi-prime numbers which are multiplication of two prime numbers. The prime numbers can be divided by only one and itself. Without prior knowledge about keys, revealing the numbers is a difficult factoring problem because of a typical RSA cryptosystem uses quite large numbers for keys.</p>
+				
+				<div class="container" align="center">
+					<img src="../images/rsa_scheme.gif" alt="" style="filter: invert(); width: 90%;">
+					<br>
+				</div>
+				
+				<br>
+				<p style="text-indent: 5%;">A simple RSA algorithm uses two different prime numbers \(p\) and \(q\). The multiplication of these two numbers gives us a semi-prime number which is called <i>modulus</i> \(n\). Modulus determines the length of the cryptosystem. Using the additional two numbers which one is public exponent \(e\) and the other is private exponent \(d\) the cryptosystem is defined.</p>
+				
+				\begin{equation}
+				Public\ key = (e,n) \\
+				Private\ key = (d,n)
+				\end{equation}
+				
+				<p style="text-indent: 5%;">While encryption is achieved by using public exponent and modulus, for the decryption the user only needs to private exponent and modulus.</p>
+				
+				\begin{equation}
+				c = (m)^e \ mod\ n
+				\end{equation}
+				
+				\begin{equation}
+				m = (c)^d \ mod\ n
+				\end{equation}
+				
+				<br>
+				<h5>Elliptic Curve Cryptography</h5>
+				<br>
+				
+				<p style="text-indent: 5%;">Elliptic curve cryptography is a new approach to the public-key cryptosystems. Since RSA is getting weaker and weaker with increasing processing capabilities of the computers, elliptic curve will be more preferred cryptosystem. Elliptic curve cryptography is a based on a shape like below.</p>
+				
+				<div class="container" align="center">
+					<img src="../images/Curve_Cryptography_fig01_2.gif" alt="" style="filter: invert(); width: 60%;">
+					<br>
+					<small>Source: https://www.allaboutcircuits.com/</small>
+				</div>
+				
+				<br>
+				<p style="text-indent: 5%;">The plaintext message is converted to a point at the plane using the formula of this shape. For example, X coordinate of this point can be chosen equal to message and Y coordinate can be evaluated.</p>
+				
+				\begin{equation}
+				y^2=x^3+Ax+B\ (mod\ p)
+				\end{equation}
+				
+				<p style="text-indent: 5%;">Let's assume the point holds the message is represented with \(M\), the ciphertext is formed by using \(C_1\) and \(C_2\) where \(r\) is a random number, \(G\) is the base point of the curve and \(K\) is the public key.</p>
+				
+				\begin{equation}
+				C_1 = M + rK \\
+				C_2 = r\ G
+				\end{equation}
+				
+				<p style="text-indent: 5%;">For decryption only \(C_1\) and \(C_2\) send to receiver and with private key \(k\) and using the equation below the message can be recovered.</p>
+				
+				\begin{equation}
+				M=C_1-k\ C_2
+				\end{equation}
+				
+				<br><br>
+				<p style="text-indent: 5%;">I developed an implementation of these cryptography techniques using Intel Integrated Performance Primitives Cryptography (IPP-Crypto) library. With this application you can encrypt a file or a directory with selected algorithm such as compression softwares. You can download and try its features freely from below. </p>
+				
+				<div class="container" align="center">
+					<div class="row">
+						<div class="col-md-6 col-xs-6 col-lg-6 col-sm-6">
+							<img src="../images/300X200.gif" alt="">
+						</div>
+						<div class="col-md-6 col-xs-6 col-lg-6 col-sm-6">
+							<img src="../images/300X200.gif" alt="">
+						</div>
+						<br>
+					</div>
+				</div>
+				
+				<br>
+				<h5 align="center" style="color: crimson"><u>Important Notice!</u></h5>
+				<p align="center" style="text-align: center;">This program has been developed only to share knowledge and experience. Please do not use it to store any sensitive data. Due to the nature of the cryptography, you will lose your data if you lose your key or in case of any program malfunction.</p>
+				
+				<p> 
+					<br>
+					<a href="" download>Download Windows installer (x86)</a>
+					<br>
+					<a href="" download>Download Windows installer (x64)</a>
+					<br>
+					<a href="https://github.com/egecetin/cryptograph-ipp">Source code (Github)</a>
+				</p>
+			</div>
+			
+			<div class="col-md-2 col-xs-2 col-lg-2 col-sm-2 sticky_sidebar" style="margin-top: 0%" align="center">
+			</div>
+			
+
+		</div>
+		
+		<!-- jQuery (For loading screen) -->
+		<script src="../js/jquery-3.3.1.min.js"></script>
+		
+		<!-- MathJax -->
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script type="text/javascript" async
+  		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+		</script>		
+		<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js"></script>
+		<script type="text/x-mathjax-config">
+  			MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
+		</script>
+	</body>
+
+	
+	<div class="footer">
+		<hr>
+		<footer align="center" style="font-size: 13px; text-align: center; filter: opacity(0.85);">Fortune favours the bold.<br><strong>Virgil</strong>
+		</footer>
+	</div>
+	
+	
+</html>

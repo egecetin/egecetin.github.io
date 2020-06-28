@@ -1,0 +1,34 @@
+/* CSS Document */
+
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.removingline {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 1) 60%, rgba(255, 255, 255, 0) 90%);
+}
+
+.sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	z-index: 999;
+	top: 0;
+	background: #000;
+}
+
+.sticky_sidebar {
+  width: 25%;
+  height: 25vh;
+  min-height: 250px;
+  z-index: 998;
+  overflow: auto;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10%;
+  background-color: #000;
+}

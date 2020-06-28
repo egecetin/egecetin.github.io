@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+	
+	<!-- Loading Screen -->	
+	<link rel="stylesheet" href="./css/loading_style.css">
+	<div id="preloader" class="loading">
+		<video style="outline:none; width:100%; height:100%;" width="1920" height="1080" preload="metadata" id="vid2" playsinline autoplay muted loop>
+			<source src="./images/Circle-9247.mp4" type="video/mp4">
+		</video>
+	</div>	
+	
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+	
+	<!-- Header -->
+	<head>		
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Contact</title>
+		<link href="css/bootstrap-4.3.1.css" rel="stylesheet">
+		<link href="css/main_style.css" rel="stylesheet">
+	</head>
+
+	<!-- Body -->
+	<body>
+		<div class="container">
+			<!-- Top menu -->
+			<div style="margin-bottom: 3em">
+				<ul class="menu">
+					<li><a href="./home.html">Home</a></li>
+					<li><a href="./projects.html">Projects</a></li>
+					<li><a href="./contact.html">Contact</a></li>
+				</ul>
+				<div class="removingline" style="filter: opacity(0.5)"></div>
+			</div>
+
+			<div class="row">
+				<!-- Left Bar -->
+				<div class="col-md-3 col-xs-3 col-lg-3 col-sm-3" style="margin-top: 5%">
+					<p>In order to contact me for job offers and any other matter
+						<a href="mailto:egecetin@hotmail.com.tr?Subject=Hello%20from%20website" target="_top">send me mail</a>.
+						<br>
+						<br>
+						For detailed information about my experiences, you can review my CV <a href="./resume.html">here</a> or you can check my Linkedin account.
+					</p>
+
+				</div>
+				
+				<!-- Body -->
+				<div class="col-md-6 col-xs-6 col-lg-6 col-sm-6">
+					<video style="outline:none; width:100%; height:100%;" width="1920" height="1080" preload="metadata" playsinline autoplay muted loop>
+						<source src="./images/Globe-5925.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+					</video>
+				</div>
+
+				<!-- Linkedin Badge -->
+				<div class="col-md-3 col-xs-3 col-lg-3 col-sm-3" style="margin-top: 5%;">
+					<div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="egecetin"><a class="LI-simple-link" href="https://tr.linkedin.com/in/egecetin/en?trk=profile-badge">Ege Çetin</a>
+					</div>
+				</div>
+			</div>
+		</div>	
+		
+		<!-- jQuery (For loading screen) -->
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#preloader").addClass("loaded");
+			});
+		</script>
+	</body>
+	
+	<div class="footer">
+		<hr>
+		<footer align="center" style="font-size: 13px; text-align: center; filter: opacity(0.85);">You can take my factories, burn up my buildings, but give me my people and I'll build the business right back again.<br><strong>Henry Ford</strong>
+		</footer>
+	</div>
+</html>
+

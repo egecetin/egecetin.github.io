@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+	
+	<!-- Header -->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Projects</title>
+		<link href="../css/bootstrap-4.3.1.css" rel="stylesheet">
+		<link href="../css/main_style.css" rel="stylesheet">		
+	</head>
+
+	<!-- Background video -->
+	<video id="vid" width="1920" height="1080" preload="metadata" playsinline autoplay muted loop>
+		<source src="../images/Science-17070.mp4" type="video/mp4">
+	</video>
+	
+	<!-- Body -->
+	<body>		
+		<!-- Top menu -->
+		<div class="container; sticky">
+			<div style="margin-bottom: 3em">
+				<ul class="menu">
+					<li><a href="../home.html">Home</a></li>
+					<li><a href="../projects.html">Projects</a></li>
+					<li><a href="../contact.html">Contact</a></li>
+				</ul>
+				<div class="removingline"></div>
+			</div>
+		</div>
+		
+		
+		
+		<div class="row">
+			<!-- Left Menu -->
+			<div class="col-md-2 col-xs-2 col-lg-2 col-sm-2 sticky_sidebar">
+				<nav class="main-nav" role="navigation">
+					<ul class="unstyled list-hover-slide">
+						<!--
+						<li><a href="./freqdetector.html">Frequency Estimator</a></li>
+						<li><a href="./crypto.html">Cryptography</a></li>
+						-->
+						<li><a href="./facelike.html">Face-looking Image Recognition</a></li>
+						<!-- <li><a href="./synopsis.html">Video Synopsis</a></li> -->
+						<li><a href="./visualizer.html">Signal Visualizer</a></li>
+						<li><a href="./localization.html">Source Localization</a></li>
+					</ul>
+				</nav>
+				
+				<!-- Clock & Date -->
+				<div id="clock" style="margin-top: 80%">
+					<p class="date">{{ date }}</p>
+					<p class="time">{{ time }}</p>
+				</div>
+				<script src="../js/vue.min.js"></script><script  src="../js/clock_script.js"></script>	
+			</div>
+			
+			<!-- Main -->
+			<div class="col-md-8 col-xs-8 col-lg-8 col-sm-8">
+				<h3 align="center">Source Localization</h3>
+				
+				<p style="text-indent: 5%;">Signals have different propagation speeds depending on their nature and environmental characteristics. As a result of propagation, every sensor (if their positions are different) will record delayed signals. Direction of arrival of the signal can be estimated by using these delays.</p>
+				<p style="text-indent: 5%;">The delay between two signals can be determined using the cross-correlation. The cross-correlation between two signals \(S_1\) and \(S_2\) described as (1). Maximum amplitude value of cross-correlation gives us the lag \((\Delta t)\) between two input signals.</p>
+				
+				\begin{equation}
+				\mathrm{E}[S_1 S_2^*]=\sum_{n=-\infty}^{\infty}
+				\end{equation}				
+				
+				<div class="container" align="center">
+					<img src="../images/crosscor.png" alt="crosscor" style="max-width: 100%;"><br>
+					<small>Cross-correaltion between two sinusoids.</small>
+				</div>				
+				<br>
+				
+				<p style="text-indent: 5%;">As mentioned the time difference is related with propagation speed \((V)\) and distance so, if the propagation speed and time difference are known with (2) the difference of distance along the wave path \((\Delta x)\) can be found.</p>
+				
+				\begin{equation}
+				\Delta x=V\times \Delta t
+				\end{equation}
+				
+				<div class="container" align="center">
+					<div class="row">
+						<div class="col-md-6 col-xs-6 col-lg-6 col-sm-6">
+							<img src="../images/local1.png" alt="" height="100%" style="max-width: 100%;">
+						</div>
+						<div class="col-md-6 col-xs-6 col-lg-6 col-sm-6">
+							<img src="../images/local2.png" alt="" height="100%" style="max-width: 100%;">
+						</div>
+					<small></small>
+					</div>	
+				</div>
+				
+				<p style="text-indent: 5%;">If we have limited number of sensors it is possible to couple them to estimate \(\Delta x\) distances and locate source. But if we have \(n\) sensors, calculation process will be more complex. To ease the process and obtain more generalized solution, distance from \(n\) sensors to source can be determined with \(n\) different equation. Assume we have identical three sensors and one signal source at \((x_s,y_s)\) distances from sensor can be defined by using three nonlinear equations.</p>
+				
+				\begin{equation}
+				\begin{split}
+				x_s^2+(y_s-y_1)^2=(r+a)^2 \\
+				x_s^2+y_s^2=(r+b)^2 \\
+				(x_s-x_3)^2+y_s^2=(r+c)^2
+				\end{split}
+				\end{equation}
+				
+				<p style="text-indent: 5%;">This equation set can be solved by using Newton-Raphson method. With this method, coordinates of source \((x_s,y_s)\) estimated iteratively using Jacobian matrix (3). </p>
+				
+				\begin{equation}
+					J=
+					\left[ {\begin{array}{ccc}		
+					2x_s & 2y_s-2y_1 & -2r-2a \\ 
+					2x_s & 2y_s & -2r-2b \\ 
+					2x_s-2x_3 & 2y_s & -2r-2c 
+					\end{array}} \right]
+				\end{equation}
+				
+				<p style="text-indent: 5%;">MATLAB implementation of this method can be downloaded from <a href="../Files/SourceLocalization_setup.exe" download>here</a> (Non-commercial use only). This application reads data from analog to digital converters (ADC) belongs to National Instruments in real time and every time step estimates the source location.</p>
+
+				<div class="container" align="center">
+					<img src="../images/localization_init.png" alt="" style="max-width: 100%;"><br>
+					<small>Screenshot of initiliazer of MATLAB application.</small>
+				</div>	
+				<br>	
+
+				<div class="container" align="center">
+					<img src="../images/localization.png" alt="" style="max-width: 100%;"><br>
+					<small>Real-time source localization of application.</small>
+				</div>	
+				<br>				
+				
+			</div>
+			
+			<div class="col-md-2 col-xs-2 col-lg-2 col-sm-2 sticky_sidebar" style="margin-top: 0%" align="center">
+			</div>
+			
+
+		</div>
+		
+		<!-- jQuery (For loading screen) -->
+		<script src="../js/jquery-3.3.1.min.js"></script>
+		
+		<!-- MathJax -->
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script type="text/javascript" async
+  		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+		</script>		
+		<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js"></script>
+		<script type="text/x-mathjax-config">
+  			MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
+		</script>
+	</body>
+
+	
+	<div class="footer">
+		<hr>
+		<footer align="center" style="font-size: 13px; text-align: center; filter: opacity(0.85);">Fortune favours the bold.<br><strong>Virgil</strong>
+		</footer>
+	</div>
+	
+	
+</html>

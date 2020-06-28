@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+	
+	<!-- Header -->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Projects</title>
+		<link href="../css/bootstrap-4.3.1.css" rel="stylesheet">
+		<link href="../css/main_style.css" rel="stylesheet">
+	</head>
+	
+	<!-- Background video -->
+	<video id="vid" width="1920" height="1080" preload="metadata" playsinline autoplay muted loop>
+		<source src="../images/Science-17070.mp4" type="video/mp4">
+	</video>
+
+	<!-- Body -->
+	<body>
+		<!-- Top menu -->
+		<div class="container; sticky">
+			<div style="margin-bottom: 3em">
+				<ul class="menu">
+					<li><a href="../home.html">Home</a></li>
+					<li><a href="../projects.html">Projects</a></li>
+					<li><a href="../contact.html">Contact</a></li>
+				</ul>
+				<div class="removingline"></div>
+			</div>
+		</div>
+		
+		
+		
+		<div class="row">
+			<!-- Left Menu -->
+			<div class="col-md-2 col-xs-2 col-lg-2 col-sm-2 sticky_sidebar">
+				<nav class="main-nav" role="navigation">
+					<ul class="unstyled list-hover-slide">
+						<!--
+						<li><a href="./freqdetector.html">Frequency Estimator</a></li>
+						<li><a href="./crypto.html">Cryptography</a></li>
+						-->
+						<li><a href="./facelike.html">Face-looking Image Recognition</a></li>
+						<!-- <li><a href="./synopsis.html">Video Synopsis</a></li> -->
+						<li><a href="./visualizer.html">Signal Visualizer</a></li>
+						<li><a href="./localization.html">Source Localization</a></li>
+					</ul>
+				</nav>
+				
+				<!-- Clock & Date -->
+				<div id="clock" style="margin-top: 80%">
+					<p class="date">{{ date }}</p>
+					<p class="time">{{ time }}</p>
+				</div>
+				<script src='../js/vue.min.js'></script><script  src="../js/clock_script.js"></script>	
+			</div>
+			
+			<!-- Main -->
+			<div class="col-md-8 col-xs-8 col-lg-8 col-sm-8">
+				<h3 align="center">Real-time Signal Visualizer</h3>
+				<p style="text-indent: 5%;">MATLAB based signal visualizer tool has been released. With this standalone application you can monitorize real-time data from supported National Instruments analog to digital converters. Additionally by using GPS functionality you can synchronize your data while recording.</p>
+				<br>
+
+				<div class="container" align="center">
+					<div class="row">
+						<div class="col-md-3 col-xs-3 col-lg-3 col-sm-3">
+							<img src="../images/visualizer_init.png" alt="" height="75%" style="max-width: 100%;">
+						</div>
+						<div class="col-md-8 col-xs-8 col-lg-8 col-sm-8">
+							<img src="../images/visualizer.png" alt="" height="75%" style="max-width: 100%;">
+						</div>						
+					</div>					
+				</div>
+				<p>You can download and try this software from following link (Non-commercial use only).</p>
+
+				<a href="../Files/SignalVisualizer_setup.exe" download>Real-time Signal Visualizer (standalone only)</a>
+				<br>
+			</div>
+			
+			<div class="col-md-2 col-xs-2 col-lg-2 col-sm-2 sticky_sidebar" style="margin-top: 0%" align="center">
+			</div>
+			
+
+		</div>
+		
+		<!-- jQuery (For loading screen) -->
+		<script src="../js/jquery-3.3.1.min.js"></script>
+	</body>
+
+	
+	<div class="footer">
+		<hr>
+		<footer align="center" style="font-size: 13px; text-align: center; filter: opacity(0.85);">Fortune favours the bold.<br><strong>Virgil</strong>
+		</footer>
+	</div>
+	
+	
+</html>

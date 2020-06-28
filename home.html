@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+	
+	<!-- Loading Screen -->	
+	<link rel="stylesheet" href="./css/loading_style.css">
+	<div id="preloader" class="loading">
+		<video style="outline:none; width:100%; height:100%;" width="1920" height="1080" preload="metadata" id="vid2" playsinline autoplay muted loop>
+			<source src="./images/Circle-9247.mp4" type="video/mp4">
+		</video>
+	</div>	
+	
+	<!--
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+	-->
+	
+	<!-- Header -->
+	<head>		
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Homepage</title>
+		<link href="css/bootstrap-4.3.1.css" rel="stylesheet">
+		<link href="css/main_style.css" rel="stylesheet">
+	</head>	
+	
+	<!-- Body -->
+	<body>
+		
+		<!-- Top menu -->
+		<div class="container; sticky">
+			<div style="margin-bottom: 3em">
+				<ul class="menu">
+					<li><a href="./home.html">Home</a></li>
+					<li><a href="./projects.html">Projects</a></li>
+					<li><a href="./contact.html">Contact</a></li>
+				</ul>
+				<div class="removingline"></div>
+			</div>
+		</div>
+	
+		<div class="container">
+
+			<div class="row" style="margin-top: -2em">
+				<!-- Left Bar -->
+				<div class="col-md-2 col-xs-2 col-lg-2 col-sm-2 sticky_sidebar" style="top: 30%; overflow: visible">
+				
+				</div>
+				
+				<!-- Body -->
+				<div class="col-md-8 col-xs-8 col-lg-8 col-sm-8">					
+					<h3 align="center">Welcome to my webpage!</h3>					
+					<p>You can browse my past works and get information about me and my knowledge. Feel free to contact for anything and to look up the sky, because <i>the only ones who fly are the ones who dare to fly</i>.</p>
+					
+					<div class="container" align="center">
+						<img src="images/Adsız.png" alt="" style="max-width: 90%;">
+						<br>						
+					</div>
+					
+					<br>
+					<div class="removingline" style="filter: opacity(0.5)"></div>
+					<br>
+					<!--
+					<h4 align="center">Cryptography application released</h4>
+					<p>An implementation of AES, RSA and Elliptic Curve cryptography has been released. You can review the project from <a href="Projects/crypto.html">here</a>.</p>
+					<div class="container" align="center">
+						<img src="images/300X200.gif" alt="" style="max-width: 90%;">
+						<br>
+					</div>
+					
+					<br>
+					<div class="removingline" style="filter: opacity(0.5)"></div>
+					<br>
+					-->
+					<h4 align="center">Fight against COVID19</h4>
+					<p>During the COVID19 pandemic we work on a fever detection application. It detects faces at selectable region of interests in real-time and measure the skin temperature from inner canthi or forehead.</p>
+					<div class="container" align="center">
+						<img src="images/termal_1.png" alt="" style="max-width: 90%;">
+						<br>						
+					</div>
+					
+					<br>
+					<div class="removingline" style="filter: opacity(0.5)"></div>
+					<br>
+										
+					<h4 align="center">Our work in the press and university media</h4>					
+					<p>You can review our progress and products from perspective of <a href="https://www.aa.com.tr/tr/bilim-teknoloji/ituden-yerli-ve-milli-yuz-tanima-sistemi/1488896" target="_blank">national media</a> and <a href="http://www.itu.edu.tr/itu-hakkinda/haberler/2019/05/27/itu-den-yerli-ve-milli-yuz-tanima-sistemi" target="_blank">Istanbul Technical University</a>.</p>
+					<div class="container" align="center">
+						<img src="images/media.png" alt="" style="max-width: 90%;">
+						<br>
+					</div>
+					
+					<br>
+					<div class="removingline" style="filter: opacity(0.5)"></div>
+					<br>
+					
+					<h4 align="center">New academic paper</h4>
+					<p><i>Face-looking Image Recognition</i> has been published at 27th Signal Processing and Communications Applications Conference. You can reach full text from <a href="https://doi.org/10.1109/SIU.2019.8806499" target="_blank">here</a>.</p>
+					
+					<div class="container" align="center">
+						<div class="row">
+							<div class="col-md-6 col-xs-6 col-lg-6 col-sm-6" align="center">
+								<img src="./images/sivas2.png" alt="" style="max-height: 250px;">
+							</div>
+							<div class="col-md-5 col-xs-5 col-lg-5 col-sm-5" align="center">
+								<img src="./images/sivas1.jpg" alt="" style="max-height: 225px; margin-top: 12px;">
+							</div>
+						<small></small>
+						</div>	
+					</div>
+					
+				</div>
+
+				<!-- Linkedin Badge -->
+				<!--
+				<div class="col-md-2 col-xs-2 col-lg-2 col-sm-2 sticky_sidebar" style="top: 20%; overflow: visible" align="center">
+					<div class="LI-profile-badge" data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="egecetin">
+						<a class="LI-simple-link" href="https://tr.linkedin.com/in/egecetin/en?trk=profile-badge">Ege Çetin</a>
+					</div>
+				</div>
+				-->
+			</div>
+		</div>	
+		
+		<!-- jQuery (For loading screen) -->
+		<script src="./js/jquery-3.3.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#preloader").addClass("loaded");
+			});
+		</script>
+	</body>
+	
+	<div class="footer">
+		<hr>
+		<footer align="center" style="font-size: 13px; text-align: center; filter: opacity(0.85)">Ask of the steel, each strut and wire, … What gave it force and power?<br><strong>Joseph B. Strauss</strong>
+		</footer>
+	</div>
+</html>
