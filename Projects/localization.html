@@ -34,27 +34,7 @@
 		
 		<div class="row">
 			<!-- Left Menu -->
-			<div class="col-md-2 col-xs-2 col-lg-2 col-sm-2 sticky_sidebar">
-				<nav class="main-nav" role="navigation">
-					<ul class="unstyled list-hover-slide">
-						<!--
-						<li><a href="./freqdetector.html">Frequency Estimator</a></li>
-						<li><a href="./crypto.html">Cryptography</a></li>
-						-->
-						<li><a href="./facelike.html">Face-looking Image Recognition</a></li>
-						<!-- <li><a href="./synopsis.html">Video Synopsis</a></li> -->
-						<li><a href="./visualizer.html">Signal Visualizer</a></li>
-						<li><a href="./localization.html">Source Localization</a></li>
-					</ul>
-				</nav>
-				
-				<!-- Clock & Date -->
-				<div id="clock" style="margin-top: 80%">
-					<p class="date">{{ date }}</p>
-					<p class="time">{{ time }}</p>
-				</div>
-				<script src="../js/vue.min.js"></script><script  src="../js/clock_script.js"></script>	
-			</div>
+			<div id="includedContent" class="col-md-2 col-xs-2 col-lg-2 col-sm-2 sticky_sidebar"></div>
 			
 			<!-- Main -->
 			<div class="col-md-8 col-xs-8 col-lg-8 col-sm-8">
@@ -64,7 +44,7 @@
 				<p style="text-indent: 5%;">The delay between two signals can be determined using the cross-correlation. The cross-correlation between two signals \(S_1\) and \(S_2\) described as (1). Maximum amplitude value of cross-correlation gives us the lag \((\Delta t)\) between two input signals.</p>
 				
 				\begin{equation}
-				\mathrm{E}[S_1 S_2^*]=\sum_{n=-\infty}^{\infty}
+				R_{S_1 S_2} = \mathrm{E}[S_1 S_2^*] = \int \int S_1 S_2  f_{S_1 S_2}(S_1,S_2) dS_1 dS_2
 				\end{equation}				
 				
 				<div class="container" align="center">
@@ -136,6 +116,13 @@
 		
 		<!-- jQuery (For loading screen) -->
 		<script src="../js/jquery-3.3.1.min.js"></script>
+		
+		<!-- Include left bar -->
+		<script> 
+		$(function(){
+		  $("#includedContent").load("./leftmenu.html"); 
+		});
+		</script>
 		
 		<!-- MathJax -->
 		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
