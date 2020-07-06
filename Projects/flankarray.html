@@ -85,8 +85,39 @@
 					<br>
 					<small><b>Figure 2.</b> Shape of (a) oblate spheroid [3], (b) ideal streamlined hull [4] and (c) modern submarine hullform with cylindrical mid body [4].</small>
 				</div>		
+				<br>
 				
-				!!!!!TABLE!!!!!
+				
+				<div align="center">
+					<small><b>Table 1.</b> CORIS-5 Flank Array Sonar Specifications.</small>
+					<table style="width: 45%;">						
+						<tr>
+							<th style="border-top: none; border-left: none; border-bottom: solid; border-right: solid; border-color: whitesmoke; text-align: center">Definition</th>
+							<th style="border-top: none; border-left: none; border-bottom: solid; border-right: none; border-color: whitesmoke; text-align: center">Value</th>
+						</tr>
+						<tr>
+							<td style="border-top: none; border-left: none; border-bottom: none; border-right: solid; border-color: whitesmoke; text-align: center">Number of sensors</td>
+							<td style="border-top: none; border-left: none; border-bottom: none; border-right: none; border-color: whitesmoke; text-align: center">48</td>
+						</tr>
+						<tr>
+							<td style="border-top: none; border-left: none; border-bottom: none; border-right: solid; border-color: whitesmoke; text-align: center">Element spacing</td>
+							<td style="border-top: none; border-left: none; border-bottom: none; border-right: none; border-color: whitesmoke; text-align: center">0.5 m</td>
+						</tr>
+						<tr>
+							<td style="border-top: none; border-left: none; border-bottom: none; border-right: solid; border-color: whitesmoke; text-align: center">Working frequency</td>
+							<td style="border-top: none; border-left: none; border-bottom: none; border-right: none; border-color: whitesmoke; text-align: center">10 - 1500 Hz</td>
+						</tr>
+						<tr>
+							<td style="border-top: none; border-left: none; border-bottom: none; border-right: solid; border-color: whitesmoke; text-align: center">Sampling frequency</td>
+							<td style="border-top: none; border-left: none; border-bottom: none; border-right: none; border-color: whitesmoke; text-align: center">5120 Hz</td>
+						</tr>
+						<tr>
+							<td style="border-top: none; border-left: none; border-bottom: none; border-right: solid; border-color: whitesmoke; text-align: center">Frequency resolution</td>
+							<td style="border-top: none; border-left: none; border-bottom: none; border-right: none; border-color: whitesmoke; text-align: center">0.375 Hz</td>
+						</tr>
+					</table>
+				</div>
+				<br>
 				
 				<p>Note that according to [2], Dolphin class submarines use FAS 3-1 flank array sonar but for this project the CORIS-5 array will be analyzed because its specifications are given more detailed in [1].</p>
 				
@@ -123,9 +154,34 @@
 				c=\lambda f
 				\end{equation}
 				
-				<p>Using the expression (2) and speed of sound at medium c equals to 1500 m/s, the wavelength λ can be evaluated. After that using the wavelength and array length, the beamwidth of the array can be determined with the expression (1). The beamwidths calculated for different center frequencies and result are given at Table 2. Additionally, the MATLAB phased array toolbox the directivity pattern plots can be seen in Figure 4 for verification.</p>
+				<p>Using the expression (2) and speed of sound at medium c equals to 1500 m/s, the wavelength \(\lambda\) can be evaluated. After that using the wavelength and array length, the beamwidth of the array can be determined with the expression (1). The beamwidths calculated for different center frequencies and result are given at Table 2. Additionally, the MATLAB phased array toolbox the directivity pattern plots can be seen in Figure 4 for verification.</p>
 				
-				!!!!!TABLE!!!!!
+				<div align="center">
+					<small><b>Table 2.</b> Calculated 3dB Beamwidths</small>
+					<table style="width: 40%;">
+						<tr>
+							<th style="border-top: none; border-left: none; border-bottom: solid; border-right: solid; border-color: whitesmoke; text-align: center">Frequency (Hz)</th>
+							<th style="border-top: none; border-left: none; border-bottom: solid; border-right: none; border-color: whitesmoke; text-align: center">3dB Beamwidth (\(^\circ\))</th>
+						</tr>
+						<tr>
+							<td style="border-top: none; border-left: none; border-bottom: none; border-right: solid; border-color: whitesmoke; text-align: center">100</td>
+							<td style="border-top: none; border-left: none; border-bottom: none; border-right: none; border-color: whitesmoke; text-align: center">32.548</td>
+						</tr>
+						<tr>
+							<td style="border-top: none; border-left: none; border-bottom: none; border-right: solid; border-color: whitesmoke; text-align: center">500</td>
+							<td style="border-top: none; border-left: none; border-bottom: none; border-right: none; border-color: whitesmoke; text-align: center">6.509</td>
+						</tr>
+						<tr>
+							<td style="border-top: none; border-left: none; border-bottom: none; border-right: solid; border-color: whitesmoke; text-align: center">900</td>
+							<td style="border-top: none; border-left: none; border-bottom: none; border-right: none; border-color: whitesmoke; text-align: center">3.616</td>
+						</tr>
+						<tr>
+							<td style="border-top: none; border-left: none; border-bottom: none; border-right: solid; border-color: whitesmoke; text-align: center">1300</td>
+							<td style="border-top: none; border-left: none; border-bottom: none; border-right: none; border-color: whitesmoke; text-align: center">2.503</td>
+						</tr>
+					</table>
+				</div>
+				<br>
 				
 				<div class="container" align="center">
 					<div class="row">
@@ -219,7 +275,20 @@
 				
 				<p>As a result, the limit distance calculated as 11644.33 km for 100 Hz center frequency and 172.75 km for 1 kHz. Since at 100 Hz the limit distance long enough transmission loss plotted for only 1 kHz in Figure 7.</p>
 
-				!!!!!TEXTBOX!!!!!
+				<div class="container" align="center">
+					<div style="border: solid #888888">
+						<small>---------------------------</small><br>
+						<small>Attenuation constant is 0.00085879 dB/km</small><br>
+						<small>alpha_2: 2.0696e-06 alpha_3: 5.1734e-05 alpha_4: 0.00080498</small><br>
+						<small>Limit range is 11644.3364km for 0.1kHz</small><br>
+						<small>---------------------------</small><br>
+						<small>Attenuation constant is 0.057889 dB/km</small><br>
+						<small>alpha_2: 0.00020696 alpha_3: 0.0051732 alpha_4: 0.052509</small><br>
+						<small>Limit range is 172.745km for 1kHz</small><br>
+						<small>---------------------------</small><br>
+					</div>
+					<div><small><b>Figure 6.</b> MATLAB output</small></div>
+				</div>
 				
 				<div class="container" align="center">
 					<img src="../images/limitrange_1000Hz.png" alt="" style="max-width: 100%;">
@@ -236,6 +305,7 @@
 					<div class="row">
 						<div class="col-md-6 col-xs-6 col-lg-6 col-sm-6">
 							<img src="../images/array_active.gif" alt="" style="max-width: 100%;">
+							<br>
 							<small><b>(a)</b></small>
 						</div>
 						<div class="col-md-6 col-xs-6 col-lg-6 col-sm-6">
@@ -262,6 +332,7 @@
 					<div class="row">
 						<div class="col-md-6 col-xs-6 col-lg-6 col-sm-6">
 							<img src="../images/snf_02.gif" alt="" style="max-width: 100%;">
+							<br>
 							<small><b>(a)</b></small>
 						</div>
 						<div class="col-md-6 col-xs-6 col-lg-6 col-sm-6">
