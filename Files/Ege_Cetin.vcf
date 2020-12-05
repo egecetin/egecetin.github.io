@@ -2,10 +2,13 @@ BEGIN:VCARD
 VERSION:2.1
 N;LANGUAGE=tr;CHARSET=windows-1254:Çetin;Ege
 FN;CHARSET=windows-1254:Ege Çetin
-ORG:Artge Technologies
-TITLE:R&D Software Development Specialist
-X-MS-OL-DEFAULT-POSTAL-ADDRESS:0
-URL;WORK:https://web.itu.edu.tr/cetine15/
+ORG:Pavelsis Avionics
+TITLE:Software Design Engineer
+ADR;WORK;PREF;CHARSET=windows-1254:;;Teknopark Bulvarý Pavelsis;Istanbul  Istanbul;;34906;Türkiye
+LABEL;WORK;PREF;CHARSET=windows-1254;ENCODING=QUOTED-PRINTABLE:Teknopark Bulvar=FD Pavelsis=0D=0A=
+34906  Istanbul  Istanbul
+X-MS-OL-DEFAULT-POSTAL-ADDRESS:2
+URL;WORK:https://egecetin.github.io
 EMAIL;PREF;INTERNET:egecetin@hotmail.com.tr
 X-MS-IMADDRESS:live:egecetin
 PHOTO;TYPE=JPEG;ENCODING=BASE64:
@@ -169,5 +172,5 @@ PHOTO;TYPE=JPEG;ENCODING=BASE64:
  QSssabQcDPqeTRRRXpI8Jn//2Q==
 
 X-MS-OL-DESIGN;CHARSET=utf-8:<card xmlns="http://schemas.microsoft.com/office/outlook/12/electronicbusinesscards" ver="1.0" layout="left" bgcolor="ffffff"><img xmlns="" align="tleft" area="32" use="photo"/><fld xmlns="" prop="name" align="left" dir="ltr" style="b" color="000000" size="10"/><fld xmlns="" prop="org" align="left" dir="ltr" color="000000" size="8"/><fld xmlns="" prop="title" align="left" dir="ltr" color="000000" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="email" align="left" dir="ltr" color="d48d2a" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="webwork" align="left" dir="ltr" color="000000" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/></card>
-REV:20200312T135539Z
+REV:20201205T141215Z
 END:VCARD

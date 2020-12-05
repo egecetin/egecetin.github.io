@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+	
+	<!-- Header -->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Ege Çetin">
+		<meta name="description" content="Microwave and Satellite Link Design">
+		<meta name="keywords" content="ege çetin, egecetin, microwave, satellite, communication, uplink, downlink, antenna, radio frequency">
+		<title>Projects</title>
+		<link href="../css/bootstrap-4.3.1.css" rel="stylesheet">
+		<link href="../css/main_style.css" rel="stylesheet">
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-171722360-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-171722360-1');
+		</script>
+	</head>
+	
+	<!-- Background video -->
+	<video id="vid" width="1920" height="1080" preload="metadata" playsinline autoplay muted loop>
+		<source src="../videos/Science-17070.mp4" type="video/mp4">
+	</video>
+
+	<!-- Body -->
+	<body>
+		<!-- Top menu -->
+		<div class="container; sticky">
+			<div style="margin-bottom: 3em">
+				<ul class="menu">
+					<li><a href="../home.html">Home</a></li>
+					<li><a href="../projects.html">Projects</a></li>
+					<li><a href="../contact.html">Contact</a></li>
+				</ul>
+				<div class="removingline"></div>
+			</div>
+		</div>
+		
+		
+		
+		<div class="row">
+			<!-- Left Menu -->
+			<div id="includedContent" class="col-md-2 col-xs-2 col-lg-2 col-sm-2 sticky_sidebar"></div>
+			
+			<!-- Main -->
+			<div class="col-md-8 col-xs-8 col-lg-8 col-sm-8">
+				<h3 align="center">Communication Links</h3>
+				<p></p>
+				
+				<div class="container" align="center">
+					<div class="row">
+						<div class="col-md-6 col-xs-6 col-lg-6 col-sm-6">
+							<img src="../images/flankarray/Spheroids.svg" alt="" style="max-width: 75%;">
+							<br>
+							<small><b>(a)</b></small>
+						</div>
+						<div class="col-md-6 col-xs-6 col-lg-6 col-sm-6">
+							<img src="../images/flankarray/sub10-768x173.png" alt="" style="max-width: 75%;">
+							<br>
+							<small><b>(b)</b></small>
+							<br>
+							<img src="../images/flankarray/sub11-768x108.png" alt="" style="max-width: 75%;">
+							<br>
+							<small><b>(c)</b></small>
+						</div>						
+					</div>
+					<br>
+					<small><b>Figure 2.</b> Shape of (a) oblate spheroid [3], (b) ideal streamlined hull [4] and (c) modern submarine hullform with cylindrical mid body [4].</small>
+				</div>		
+				<br>
+								
+				\begin{equation}
+				\tau_4 = 5.15 \; 10^{-7} \: e^{\frac{1590}{T+273}}
+				\end{equation}
+
+				<h5>References</h5>
+				<ul style="list-style: none;">
+					<li>[1] L. Qihu, Digital Sonar Design in Underwater Acoustics, Beijing: Springer-Verlag Berlin Heidelberg, 2012, pp. 543-552.</li>
+				</ul>
+			</div>
+			
+			<!-- Right bar -->
+			<div class="col-md-2 col-xs-2 col-lg-2 col-sm-2 sticky_sidebar" style="margin-top: 0%" align="center">
+			</div>
+			
+
+		</div>
+		
+		<!-- jQuery (For loading screen) -->
+		<script src="../js/jquery-3.3.1.min.js"></script>
+		
+		<!-- Include left bar -->
+		<script> 
+		$(function(){
+		  $("#includedContent").load("./leftmenu.html"); 
+		});
+		</script>
+		
+		<!-- MathJax -->
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script type="text/javascript" async
+  		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+		</script>		
+		<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js"></script>
+		<script type="text/x-mathjax-config">
+  			MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
+		</script>
+	</body>
+
+	
+	<div class="footer">
+		<hr>
+		<footer align="center" style="font-size: 13px; text-align: center; filter: opacity(0.85);">Fortune favours the bold.<br><strong>Virgil</strong>
+		</footer>
+	</div>
+	
+	
+</html>
