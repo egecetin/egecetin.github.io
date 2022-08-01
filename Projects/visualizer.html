@@ -2,27 +2,28 @@
 <html lang="en">
 
 <!-- Header -->
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="author" content="Ege Çetin">
-<meta name="description" content="Visualize a signal">
-<meta name="keywords" content="ege çetin, egecetin, signal processing, visualizer">
-<title>Projects</title>
-<link rel="icon" href="../images/smalllogo_invert.png">
-<link href="../css/bootstrap-4.3.1.css" rel="stylesheet">
-<link href="../css/main_style.css" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Ege Çetin">
+	<meta name="description" content="Visualize a signal">
+	<meta name="keywords" content="ege çetin, egecetin, signal processing, visualizer">
+	<title>Projects</title>
+	<link rel="icon" href="../images/smalllogo_invert.png">
+	<link href="../css/bootstrap-4.3.1.css" rel="stylesheet">
+	<link href="../css/main_style.css" rel="stylesheet">
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-66M0BTG313"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-66M0BTG313"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
 
-  gtag('config', 'G-66M0BTG313');
-</script>
+		gtag('config', 'G-66M0BTG313');
+	</script>
 </head>
 
 <!-- Background video -->
@@ -31,58 +32,68 @@
 </video>
 
 <!-- Body -->
+
 <body>
-<!-- Top menu -->
-<div class="container; sticky">
-	<div style="margin-bottom: 3em">
-		<ul class="menu">
-			<li><a href="../home.html">Home</a></li>
-			<li><a href="../projects.html">Projects</a></li>
-			<li><a href="../contact.html">Contact</a></li>
-		</ul>
-		<div class="removingline"></div>
-	</div>
-</div>
-<div class="row"> 
-	<!-- Left Menu -->
-	<div id="includedContent" class="col-md-2 col-xs-2 col-lg-2 col-sm-2 sticky_sidebar"></div>
-	
-	<!-- Main -->
-	<div class="col-md-8 col-xs-8 col-lg-8 col-sm-8">
-		<h3 align="center">Real-time Signal Visualizer</h3>
-		<p style="text-indent: 5%;">MATLAB based signal visualizer tool has been released. With this standalone application you can monitorize real-time data from supported National Instruments analog to digital converters. Additionally by using GPS functionality you can synchronize your data while recording.</p>
-		<br>
-		<div class="container" align="center">
-			<div class="row">
-				<div class="col-md-3 col-xs-3 col-lg-3 col-sm-3"> <img src="../images/visualizer/visualizer_init.png" alt="" height="75%" style="max-width: 100%;"> </div>
-				<div class="col-md-8 col-xs-8 col-lg-8 col-sm-8"> <img src="../images/visualizer/visualizer.png" alt="" height="75%" style="max-width: 100%;"> </div>
-			</div>
+	<!-- Top menu -->
+	<div class="container; sticky">
+		<div style="margin-bottom: 3em">
+			<ul class="menu">
+				<li><a href="../home.html">Home</a></li>
+				<li><a href="../projects.html">Projects</a></li>
+				<li><a href="../contact.html">Contact</a></li>
+			</ul>
+			<div class="removingline"></div>
 		</div>
-		<p>You can download and try this software from following link (Non-commercial use only).</p>
-		<a href="https://github.com/egecetin/NI_Recorder/releases/tag/v1.0" target="_blank">Real-time Signal Visualizer</a> <br>
 	</div>
-	<div class="col-md-2 col-xs-2 col-lg-2 col-sm-2 sticky_sidebar" style="margin-top: 0%" align="center"> </div>
-</div>
+	<div class="row">
+		<!-- Left Menu -->
+		<div id="includedContent" class="col-md-2 col-xs-2 col-lg-2 col-sm-2 sticky_sidebar"></div>
 
-<!-- jQuery (For loading screen) --> 
-<script src="../js/jquery-3.3.1.min.js"></script> 
+		<!-- Main -->
+		<div class="col-md-8 col-xs-8 col-lg-8 col-sm-8">
+			<h3 align="center">Real-time Signal Visualizer</h3>
+			<p style="text-indent: 5%;">MATLAB based signal visualizer tool has been released. With this standalone
+				application you can monitorize real-time data from supported National Instruments analog to digital
+				converters. Additionally by using GPS functionality you can synchronize your data while recording.</p>
+			<br>
+			<div class="container" align="center">
+				<div class="row">
+					<div class="col-md-3 col-xs-3 col-lg-3 col-sm-3"> <img
+							src="../images/visualizer/visualizer_init.png" alt="" height="75%" style="max-width: 100%;">
+					</div>
+					<div class="col-md-8 col-xs-8 col-lg-8 col-sm-8"> <img src="../images/visualizer/visualizer.png"
+							alt="" height="75%" style="max-width: 100%;"> </div>
+				</div>
+			</div>
+			<p>You can download and try this software from following link (Non-commercial use only).</p>
+			<a href="https://github.com/egecetin/NI_Recorder/releases/tag/v1.0" target="_blank">Real-time Signal
+				Visualizer</a> <br>
+		</div>
+		<div class="col-md-2 col-xs-2 col-lg-2 col-sm-2 sticky_sidebar" style="margin-top: 0%" align="center"> </div>
+	</div>
 
-<!-- Include left bar --> 
-<script> 
-		$(function(){
-		  $("#includedContent").load("./leftmenu.html"); 
+	<!-- jQuery (For loading screen) -->
+	<script src="../js/jquery-3.3.1.min.js"></script>
+
+	<!-- Include left bar -->
+	<script>
+		$(function () {
+			$("#includedContent").load("./leftmenu.html");
 		});
-		</script> 
+	</script>
 
-<!-- Playback videos --> 
-<script>
-			document.getElementById('vid').play();
-			document.getElementById('vid2').play();
-		</script>
+	<!-- Playback videos -->
+	<script>
+		document.getElementById('vid').play();
+		document.getElementById('vid2').play();
+	</script>
 </body>
 <div class="footer">
 	<hr>
-	<footer align="center" style="font-size: 13px; text-align: center; filter: opacity(0.85);">Fortune favours the bold.<br>
-		<strong>Virgil</strong></footer>
+	<footer align="center" style="font-size: 13px; text-align: center; filter: opacity(0.85);">Fortune favours the
+		bold.<br>
+		<strong>Virgil</strong>
+	</footer>
 </div>
+
 </html>
