@@ -1,67 +1,83 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<url>
-	<loc>https://egecetin.github.io/</loc>
-	<lastmod>2022-08-02T23:28:58+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://egecetin.github.io/home.html</loc>
-	<lastmod>2022-08-02T23:28:58+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://egecetin.github.io/projects.html</loc>
-	<lastmod>2022-08-02T23:28:58+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://egecetin.github.io/contact.html</loc>
-	<lastmod>2022-08-02T23:28:58+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://egecetin.github.io/Projects/sonar-principle.html</loc>
-	<lastmod>2022-08-02T23:28:58+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://egecetin.github.io/Projects/remotesensing-geology.html</loc>
-	<lastmod>2022-08-02T23:28:58+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://egecetin.github.io/Projects/flankarray.html</loc>
-	<lastmod>2022-08-02T23:28:58+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://egecetin.github.io/Projects/crypto.html</loc>
-	<lastmod>2022-08-02T23:29:00+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://egecetin.github.io/Projects/hurricane-underwater-noise.html</loc>
-	<lastmod>2022-08-02T23:29:00+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://egecetin.github.io/Projects/visualizer.html</loc>
-	<lastmod>2022-08-02T23:29:00+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://egecetin.github.io/Projects/localization.html</loc>
-	<lastmod>2022-08-02T23:29:00+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://egecetin.github.io/Projects/facelike.html</loc>
-	<lastmod>2022-08-02T23:29:00+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://egecetin.github.io/resume.html</loc>
-	<lastmod>2022-08-02T23:29:01+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>https://www.egecetin.github.io</loc>
+		<priority>1.00</priority>
+		<lastmod>2023-05-21</lastmod>
+	</url>
+	<url>
+		<loc>https://www.egecetin.github.io/resume.html</loc>
+		<priority>0.67</priority>
+		<lastmod>2023-05-21</lastmod>
+	</url>
+	<url>
+		<loc>https://www.egecetin.github.io/projects.html</loc>
+		<priority>0.67</priority>
+		<lastmod>2023-05-21</lastmod>
+	</url>
+	<url>
+		<loc>https://www.egecetin.github.io/linkedin.html</loc>
+		<priority>0.67</priority>
+		<lastmod>2023-05-21</lastmod>
+	</url>
+	<url>
+		<loc>https://www.egecetin.github.io/home.html</loc>
+		<priority>0.67</priority>
+		<lastmod>2023-05-21</lastmod>
+	</url>
+	<url>
+		<loc>https://www.egecetin.github.io/contact.html</loc>
+		<priority>0.67</priority>
+		<lastmod>2023-05-21</lastmod>
+	</url>
+	<url>
+		<loc>https://www.egecetin.github.io/404.html</loc>
+		<priority>0.67</priority>
+		<lastmod>2023-05-21</lastmod>
+	</url>
+	<url>
+		<loc>https://www.egecetin.github.io/Projects/visualizer.html</loc>
+		<priority>0.33</priority>
+		<lastmod>2023-05-21</lastmod>
+	</url>
+	<url>
+		<loc>https://www.egecetin.github.io/Projects/sonar-principle.html</loc>
+		<priority>0.33</priority>
+		<lastmod>2023-05-21</lastmod>
+	</url>
+	<url>
+		<loc>https://www.egecetin.github.io/Projects/remotesensing-geology.html</loc>
+		<priority>0.33</priority>
+		<lastmod>2023-05-21</lastmod>
+	</url>
+	<url>
+		<loc>https://www.egecetin.github.io/Projects/localization.html</loc>
+		<priority>0.33</priority>
+		<lastmod>2023-05-21</lastmod>
+	</url>
+	<url>
+		<loc>https://www.egecetin.github.io/Projects/leftmenu.html</loc>
+		<priority>0.33</priority>
+		<lastmod>2023-05-21</lastmod>
+	</url>
+	<url>
+		<loc>https://www.egecetin.github.io/Projects/hurricane-underwater-noise.html</loc>
+		<priority>0.33</priority>
+		<lastmod>2023-05-21</lastmod>
+	</url>
+	<url>
+		<loc>https://www.egecetin.github.io/Projects/flankarray.html</loc>
+		<priority>0.33</priority>
+		<lastmod>2023-05-21</lastmod>
+	</url>
+	<url>
+		<loc>https://www.egecetin.github.io/Projects/facelike.html</loc>
+		<priority>0.33</priority>
+		<lastmod>2023-05-21</lastmod>
+	</url>
+	<url>
+		<loc>https://www.egecetin.github.io/Projects/crypto.html</loc>
+		<priority>0.33</priority>
+		<lastmod>2023-05-21</lastmod>
+	</url>
 </urlset>

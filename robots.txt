@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://egecetin.github.io/robots.txt
+Sitemap: https://egecetin.github.io/sitemap.xml
