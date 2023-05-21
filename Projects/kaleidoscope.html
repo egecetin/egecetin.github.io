@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Header -->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Ege Çetin">
+	<meta name="description" content="C and CUDA library to create kaleidoscope effect">
+	<meta name="keywords" content="ege çetin, egecetin, kaleidoscope, image-processing, cuda, library">
+	<title>Kaleidoscope Library</title>
+	<link rel="icon" href="../images/smalllogo_invert.png">
+	<link href="../css/bootstrap-4.3.1.css" rel="stylesheet">
+	<link href="../css/main_style.css" rel="stylesheet">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-66M0BTG313"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-66M0BTG313');
+	</script>
+</head>
+
+<!-- Background video -->
+<video id="vid" width="1920" height="1080" preload="metadata" playsinline autoplay muted loop>
+	<source src="../videos/Science-17070.mp4" type="video/mp4">
+</video>
+
+<!-- Body -->
+
+<body>
+	<!-- Top menu -->
+	<div class="container; sticky">
+		<div style="margin-bottom: 3em">
+			<ul class="menu">
+				<li><a href="../home.html">Home</a></li>
+				<li><a href="../projects.html">Projects</a></li>
+				<li><a href="../contact.html">Contact</a></li>
+			</ul>
+			<div class="removingline"></div>
+		</div>
+	</div>
+	<div class="row">
+		<!-- Left Menu -->
+		<div id="includedContent" class="col-md-2 col-xs-2 col-lg-2 col-sm-2 sticky_sidebar"></div>
+
+		<!-- Main -->
+		<div class="col-md-8 col-xs-8 col-lg-8 col-sm-8">
+			<div class="container" align="center"> <img src="../images/kaleidoscope/kaleidoscope-white.png" alt=""
+					style="max-width: 90%;"> <br>
+				<small></small>
+			</div>
+			<h3 align="center">A Library to Create Kaleidoscope Effect</h3>
+
+			<p style="text-indent: 5%;">Kaleidoscope is derived from Ancient Greek and it means <i>observation of
+					beautiful forms</i> according to Wikipedia <a href="https://en.wikipedia.org/wiki/Kaleidoscope">
+					[1]</a>. But what is this effect and how this effect is generated? First of all take a look at the
+				logo above. Did you see the hexagons replacing the "o" characters? This is the simplest example of
+				kaleidoscope effect for a triangle. Simply you are rotating and concataneting the triangles to form a
+				hexagon shape. So this is a kaleidoscope image of a triangle with six rotations. See the image below.
+			</p>
+
+			<div class="container" align="center">
+				<div class="row">
+					<div class="col-md-6 col-xs-6 col-lg-6 col-sm-6"> <img src="../images/kaleidoscope/simple-image-1.png"
+							alt="" style="max-width: 100%;">
+					</div>
+					<div class="col-md-6 col-xs-6 col-lg-6 col-sm-6"> <img src="../images/kaleidoscope/simple-image-2.png"
+							alt="" style="max-width: 100%;">
+					</div>
+				</div>
+				<br>
+				<small>Rotation of cropped image to generate effect</small>
+			</div>
+			<br>
+
+			<p style="text-indent: 5%;">But how is this possible for images with rectangular or even with different
+				types of images? Just by cropping and scaling them. For example assume we have 1920x1080 resolution
+				image. This means that we have a rectangular image. So for the generating effect with <i>n</i> image
+				rotation we have to determine the triangle. By using two sides and an angle between them we can
+				calculate all of the properties of this angle. Also for the effect the triangle is isosceles. So, since
+				for the effect generation <i>n</i> image rotation is requested,</p>
+
+			\begin{equation}
+			{\alpha}=360/n
+			\end{equation}
+
+			\begin{equation}
+			h_{triangle}=min(\frac{w_{image}}{2\;tan(\alpha / 2)}, h_{image})
+			\end{equation}
+
+			\begin{equation}
+			\frac{w_{triangle}}{2}=h_{triangle}\;tan(\alpha / 2)
+			\end{equation}
+
+			<p style="text-indent: 5%;">All of the required properties of triangle is defined so what's next? Scaling
+				and rotating them! For the library, I used a transformation map to hold these information since the
+				source and destination pixels will be constant for the same resolution and number of rotations. So while
+				the initialization function consumes more memory and processing time, on fly operations will be faster.
+				Where \(\varphi\) is the rotation angle, the source and destination pixel coordinates are defined as,</p>
+
+			<!-- Koordinat dönüşümü buraya -->
+			\begin{equation}
+			x_{dest}=x\;cos(\varphi) + y\;sin(\varphi)
+			\end{equation}
+
+			\begin{equation}
+			y_{dest}=y\;cos(\varphi) + x\;sin(\varphi)
+			\end{equation}
+
+			<p style="text-indent: 5%;">Now we know the which pixels are involved in the effect and we have source and
+				destination pixel maps. So we can apply the transformation! Just take the source image and copy pixels
+				to destination image according to map. That's it! See an example image below for the kaleidoscope
+				effect.
+			</p>
+
+			<div class="container" align="center">
+				<div class="row">
+					<div class="col-md-6 col-xs-6 col-lg-6 col-sm-6"> <img src="../images/kaleidoscope/ac-synin.png"
+							alt="Image Source: Assassins's Creed Valhalla" style="max-width: 100%;">
+						<small><b>(a)</b></small>
+					</div>
+					<div class="col-md-6 col-xs-6 col-lg-6 col-sm-6"> <img src="../images/kaleidoscope/ac-synin-out.png"
+							alt="Image Source: Assassins's Creed Valhalla" style="max-width: 100%;">
+						<small><b>(b)</b></small>
+					</div>
+				</div>
+				<br>
+				<small>An example to applied effect with number of rotations is six.</small>
+			</div>
+			<br>
+
+			<p style="text-indent: 5%;">You can find the library in GitHub from <a
+					href="https://github.com/egecetin/libKaleidoscope" target="_blank">here</a> or the developer
+				documentation <a href="https://egecetin.github.io/libKaleidoscope/" target="_blank">here</a>.
+
+			<ul style="list-style: none;">
+				<li>[1] Wikipedia Kaleidoscope Entry https://en.wikipedia.org/wiki/Kaleidoscope</li>
+			</ul>
+		</div>
+		<div class="col-md-2 col-xs-2 col-lg-2 col-sm-2 sticky_sidebar" style="margin-top: 0%" align="center"> </div>
+	</div>
+
+	<!-- jQuery (For loading screen) -->
+	<script src="../js/jquery-3.3.1.min.js"></script>
+
+	<!-- Include left bar -->
+	<script>
+		$(function () {
+			$("#includedContent").load("./leftmenu.html");
+		});
+	</script>
+
+	<!-- Playback videos -->
+	<script>
+		document.getElementById('vid').play();
+		document.getElementById('vid2').play();
+	</script>
+
+	<!-- MathJax -->
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script type="text/javascript" async
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+		</script>
+	<script type="text/javascript" id="MathJax-script" async
+		src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js"></script>
+	<script type="text/x-mathjax-config">
+  			MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
+		</script>
+</body>
+<div class="footer">
+	<hr>
+	<footer align="center" style="font-size: 13px; text-align: center; filter: opacity(0.85);">Fortune favours the
+		bold.<br>
+		<strong>Virgil</strong>
+	</footer>
+</div>
+
+</html>

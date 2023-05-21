@@ -1,0 +1,21 @@
+fail_fast: false
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: trailing-whitespace
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+        args: ['--fix=lf']
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.2.4
+    hooks:
+      - id: codespell
+        pass_filenames: false
+  - repo: https://github.com/crate-ci/typos
+    rev: typos-dict-v0.9.26
+    hooks:
+      - id: typos
+        pass_filenames: false

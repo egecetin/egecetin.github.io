@@ -1,0 +1,4 @@
+[codespell]
+skip = ./typos-config.toml,./js/*,./.git/*,./Files/*
+ignore-words = codespell-ignore-list.txt
+count =

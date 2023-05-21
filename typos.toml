@@ -1,0 +1,16 @@
+[files]
+extend-exclude = [
+                    "js",
+                    "codespell-ignore-list.txt"
+                 ]
+
+[default.extend-identifiers]
+
+
+[default.extend-words]
+Ege="Ege"
+
+
+[type.make]
+extend-glob = []
+check-file = false
