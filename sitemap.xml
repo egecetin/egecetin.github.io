@@ -6,17 +6,7 @@
 		<lastmod>2023-05-21</lastmod>
 	</url>
 	<url>
-		<loc>https://www.egecetin.github.io/resume.html</loc>
-		<priority>0.67</priority>
-		<lastmod>2023-05-21</lastmod>
-	</url>
-	<url>
-		<loc>https://www.egecetin.github.io/projects.html</loc>
-		<priority>0.67</priority>
-		<lastmod>2023-05-21</lastmod>
-	</url>
-	<url>
-		<loc>https://www.egecetin.github.io/linkedin.html</loc>
+		<loc>https://www.egecetin.github.io/contact.html</loc>
 		<priority>0.67</priority>
 		<lastmod>2023-05-21</lastmod>
 	</url>
@@ -26,47 +16,22 @@
 		<lastmod>2023-05-21</lastmod>
 	</url>
 	<url>
-		<loc>https://www.egecetin.github.io/contact.html</loc>
+		<loc>https://www.egecetin.github.io/linkedin.html</loc>
 		<priority>0.67</priority>
 		<lastmod>2023-05-21</lastmod>
 	</url>
 	<url>
-		<loc>https://www.egecetin.github.io/Projects/visualizer.html</loc>
-		<priority>0.33</priority>
+		<loc>https://www.egecetin.github.io/projects.html</loc>
+		<priority>0.67</priority>
 		<lastmod>2023-05-21</lastmod>
 	</url>
 	<url>
-		<loc>https://www.egecetin.github.io/Projects/sonar-principle.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-05-21</lastmod>
+		<loc>https://www.egecetin.github.io/resume.html</loc>
+		<priority>0.67</priority>
+		<lastmod>2023-07-02</lastmod>
 	</url>
 	<url>
-		<loc>https://www.egecetin.github.io/Projects/remotesensing-geology.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-05-21</lastmod>
-	</url>
-	<url>
-		<loc>https://www.egecetin.github.io/Projects/localization.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-05-21</lastmod>
-	</url>
-	<url>
-		<loc>https://www.egecetin.github.io/Projects/leftmenu.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-05-21</lastmod>
-	</url>
-	<url>
-		<loc>https://www.egecetin.github.io/Projects/kaleidoscope.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-05-21</lastmod>
-	</url>
-	<url>
-		<loc>https://www.egecetin.github.io/Projects/hurricane-underwater-noise.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-05-21</lastmod>
-	</url>
-	<url>
-		<loc>https://www.egecetin.github.io/Projects/flankarray.html</loc>
+		<loc>https://www.egecetin.github.io/Projects/crypto.html</loc>
 		<priority>0.33</priority>
 		<lastmod>2023-05-21</lastmod>
 	</url>
@@ -76,7 +41,42 @@
 		<lastmod>2023-05-21</lastmod>
 	</url>
 	<url>
-		<loc>https://www.egecetin.github.io/Projects/crypto.html</loc>
+		<loc>https://www.egecetin.github.io/Projects/flankarray.html</loc>
+		<priority>0.33</priority>
+		<lastmod>2023-05-21</lastmod>
+	</url>
+	<url>
+		<loc>https://www.egecetin.github.io/Projects/hurricane-underwater-noise.html</loc>
+		<priority>0.33</priority>
+		<lastmod>2023-05-21</lastmod>
+	</url>
+	<url>
+		<loc>https://www.egecetin.github.io/Projects/kaleidoscope.html</loc>
+		<priority>0.33</priority>
+		<lastmod>2023-05-21</lastmod>
+	</url>
+	<url>
+		<loc>https://www.egecetin.github.io/Projects/leftmenu.html</loc>
+		<priority>0.33</priority>
+		<lastmod>2023-05-21</lastmod>
+	</url>
+	<url>
+		<loc>https://www.egecetin.github.io/Projects/localization.html</loc>
+		<priority>0.33</priority>
+		<lastmod>2023-05-21</lastmod>
+	</url>
+	<url>
+		<loc>https://www.egecetin.github.io/Projects/remotesensing-geology.html</loc>
+		<priority>0.33</priority>
+		<lastmod>2023-05-21</lastmod>
+	</url>
+	<url>
+		<loc>https://www.egecetin.github.io/Projects/sonar-principle.html</loc>
+		<priority>0.33</priority>
+		<lastmod>2023-05-21</lastmod>
+	</url>
+	<url>
+		<loc>https://www.egecetin.github.io/Projects/visualizer.html</loc>
 		<priority>0.33</priority>
 		<lastmod>2023-05-21</lastmod>
 	</url>
