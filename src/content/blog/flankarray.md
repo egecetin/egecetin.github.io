@@ -1,6 +1,6 @@
 ---
 title: "Flank Array Sonar"
-description: "Torpedoes are the most dangerous threat for submarines. But how flank array sonars detect them?"
+description: "Torpedoes are the most dangerous threat for submarines. But how flank array sonars detect them? An analysis of a flank array sonar developed by RAFAEL company"
 pubDate: "Jul 5 2020"
 heroImage: "/blog/submarine-sonar-placement.png"
 tags: ["signal processing", "underwater acoustics"]
