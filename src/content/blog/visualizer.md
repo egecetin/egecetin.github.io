@@ -1,12 +1,16 @@
-### Real-time Signal Visualizer
-
+---
+title: "Real-time Signal Visualizer"
+description: "MATLAB based signal visualizer tool"
+pubDate: "Jun 28 2020"
+heroImage: "/blog/visualizer.png"
+tags: ["signal processing"]
+---
 MATLAB based signal visualizer tool has been released. With this standalone
 application you can monitorize real-time data from supported National Instruments analog to digital
 converters. Additionally by using GPS functionality you can synchronize your data while recording.
 
-Image visualizer_init.png XXX
-
-Image visualizer.png XXX
+![Visualizer Init](/blog/visualizer_init.png "Visualizer Init")
+![Visualizer](/blog/visualizer.png "Visualizer")
 
 You can download and try this software from following link (Non-commercial use only).
 
