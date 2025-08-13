@@ -9,8 +9,8 @@ The most dangerous threat for submarines is torpedoes and depth charges because 
 
 The submarines mainly use their bow and towed arrays for monitoring the places and track targets in the perimeter but both of them have some limitations. For example, the aperture of the bow array is limited by submarine width because it is located in front of the ship and towed array requires a winch and long tow cable which causes some installation and maneuvering problems. These disadvantages can be overcome with flank arrays. The flank array sonar is an array of hydrophones placed along the submarine hull for passive acoustic monitoring [1]. Therefore, a large aperture array can be obtained along the submarine hull with flank array. As a disadvantage, this type of array suffers from interference with submarine's self-noise [1].
 
-![Sonar placement](/blog/submarine-sonar-placement.png "Sonar placement)
-**Figure 1.** Some sonar types and their locations on submarine [1].
+![Sonar placement](/blog/submarine-sonar-placement.png "Sonar placement")
+<p align="center"><b>Figure 1.</b> Some sonar types and their locations on submarine [1].</p>
 
 In this project, a CORIS-5 flank array sonar developed by RAFAEL Company, which its’ specifications given in [1] and Table 1, will be analyzed for both an active and a passive case scenarios that two Dolphin class submarines [2] try to catch each other.
 
@@ -19,15 +19,17 @@ The flank arrays are mainly focused on passive acoustic monitoring so it must ha
 The flank arrays are developed for passive monitoring but it can also detect the active sonar pings if it is in its frequency range. For active case the other submarines can be assumed as oblate spheroid for target strength calculations which is shown in Figure 2.
 
 ![Spheroids](/blog/Spheroids.svg "Spheroids")
-**(a)**
+<p align="center"><b>(a)</b></p>
+
 ![Streamlined hull](/blog/sub10-768x173.png "Streamlined hull")
-**(b)**
+<p align="center"><b>(b)</b></p>
+
 ![Cylindrical mid body](/blog/sub11-768x108.png "Cylindrical mid body")
-**(c)**
+<p align="center"><b>(c)</b></p>
 
-**Figure 2.** Shape of (a) oblate spheroid [3], (b) ideal streamlined hull [4] and (c) modern submarine hullform with cylindrical mid body [4].
+<p align="center"><b>Figure 2.</b> Shape of (a) oblate spheroid [3], (b) ideal streamlined hull [4] and (c) modern submarine hullform with cylindrical mid body [4].</p>
 
-**Table 1.** CORIS-5 Flank Array Sonar Specifications.
+<p align="center"><b>Table 1.</b> CORIS-5 Flank Array Sonar Specifications.</p>
 
 | Definition | Value |
 | --- | --- |
@@ -44,11 +46,12 @@ Note that according to [2], Dolphin class submarines use FAS 3-1 flank array son
 First of all, using given details in [1] an identical array created in MATLAB. Visualization of the array can be found in Figure 3 (a). Firstly using MATLAB the flank arrays directivity pattern calculated and the result for frequencies from 50 Hz to 1500 Hz can be seen in Figure 3 (b).
 
 ![Array](/blog/sonar_array.png "Array")
-**(a)**
-![Sonar Waterfall](/blog/sonar_waterfall.png "Sonar Waterfall")
-**(b)**
+<p align="center"><b>(a)</b></p>
 
-**Figure 3.** CORIS-5 flank array sonar (a) geometry and (b) directivity pattern for frequencies up to 1500 Hz.
+![Sonar Waterfall](/blog/sonar_waterfall.png "Sonar Waterfall")
+<p align="center"><b>(b)</b></p>
+
+<p align="center"><b>Figure 3.</b> CORIS-5 flank array sonar (a) geometry and (b) directivity pattern for frequencies up to 1500 Hz.</p>
 
 Beamwidth is an indication of the directivity and beamwidth practically defined as the angle difference between where the output power is 3 dB less than its maximum. Mathematically the 3-dB beamwidth can be calculated for linear arrays with (1).
 
@@ -64,7 +67,7 @@ c=\lambda f
 
 Using the expression (2) and speed of sound at medium c equals to 1500 m/s, the wavelength \(\lambda\) can be evaluated. After that using the wavelength and array length, the beamwidth of the array can be determined with the expression (1). The beamwidths calculated for different center frequencies and result are given at Table 2. Additionally, the MATLAB phased array toolbox the directivity pattern plots can be seen in Figure 4 for verification.
 
-**Table 2.** Calculated 3dB Beamwidths
+<p align="center"><b>Table 2.</b> Calculated 3dB Beamwidths</p>
 
 | Frequency (Hz) | 3dB Beamwidth (\(^\circ\)) |
 | --- | --- |
@@ -74,16 +77,18 @@ Using the expression (2) and speed of sound at medium c equals to 1500 m/s, the 
 | 1300 | 2.503 |
 
 ![100Hz pattern](/blog/100Hz_sonar.png "100 Hz pattern")
-**(a)**
+<p align="center"><b>(a)</b></p>
+
 ![500Hz pattern](/blog/500Hz_sonar.png "500 Hz pattern")
-**(b)**
+<p align="center"><b>(b)</b></p>
 
 ![900Hz pattern](/blog/900Hz_sonar.png "900 Hz pattern")
-**(c)**
-![1300Hz pattern](/blog/1300Hz_sonar.png "1300 Hz pattern")
-**(d)**
+<p align="center"><b>(c)</b></p>
 
-**Figure 4.** Directivity patterns of sonar at (a) 100 Hz, (b) 500 Hz, (c) 900 Hz and (d) 1300 Hz.
+![1300Hz pattern](/blog/1300Hz_sonar.png "1300 Hz pattern")
+<p align="center"><b>(d)</b></p>
+
+<p align="center"><b>Figure 4.</b> Directivity patterns of sonar at (a) 100 Hz, (b) 500 Hz, (c) 900 Hz and (d) 1300 Hz.</p>
 
 Figure 4 shows that for low frequencies the array has wider beamwidth. Since the flank array designed for passively observe propeller noise the result is consistent. Furthermore, when Figure 4 is examined in detail, it is observed that the pattern is almost omnidirectional for low frequencies if a null at approximately 40 degrees is ignored.
 
@@ -129,12 +134,12 @@ P=h \rho g = 125 \; 1026 \, \frac{9.81}{101325} = \; 12.4168 \, atm
 \end{equation}
 
 ![Mean Salinity](/blog/mean_salinity_2005.jpg "Mean salinity")
-**(a)**
+<p align="center"><b>(a)</b></p>
 
 ![Density against depth](/blog/sm_density_depth.png "Density against depth")
-**(b)**
+<p align="center"><b>(b)</b></p>
 
-**Figure 5.** (a) Salinity map [5] and (b) water density change with depth [6].
+<p align="center"><b>Figure 5.</b> (a) Salinity map [5] and (b) water density change with depth [6].</p>
 
 As a result, the limit distance calculated as 11644.33 km for 100 Hz center frequency and 172.75 km for 1 kHz. Since at 100 Hz the limit distance long enough transmission loss plotted for only 1 kHz in Figure 7.
 
@@ -150,21 +155,22 @@ Limit range is 172.745km for 1kHz<br>
 ---------------------------<br>
 </code>
 
-**Figure 6.** MATLAB output
+<p align="center"><b>Figure 6.</b> MATLAB output</p>
 
 ![Limit range](/blog/limitrange_1000Hz.png "Limit range for 1kHz")
-**Figure 7.** Transmission loss respect to the range.
+<p align="center"><b>Figure 7.</b> Transmission loss respect to the range.</p>
 
 ### Sonar Eqauation
 
 The sonars can work at two different modes. One of them is passive case where hydrophone array only listens its surroundings. The other is active sonar case where a ping sent by a transducer and array receives the signal reflected from objects and/or environment. These operating modes are shown in Figure 8.
 
 ![Active Array](/blog/array_active.gif "Active Array")
-**(a)**
-![Passive Array](/blog/array_passive.gif "Passive Array")
-**(b)**
+<p align="center"><b>(a)</b></p>
 
-**Figure 8.** Sonar operating modes; (a) active and (b) passive.
+![Passive Array](/blog/array_passive.gif "Passive Array")
+<p align="center"><b>(b)</b></p>
+
+<p align="center"><b>Figure 8.</b> Sonar operating modes; (a) active and (b) passive.</p>
 
 #### Passive Case
 
@@ -177,15 +183,15 @@ SL-TL-(NL-DI)>DT
 where SL is source level, TL is transmission loss, NL is noise level, DI is directivity index and DT is the detection threshold. Since the scenario is related with detection of a submarine, source level is the propeller or machine noise emitted from the target submarine. Using the Figure 9 (a), the source level considered as 20 dB, that is, the submarine is patrolling without cavitation and the noise level assumed as 51 dB by using Figure 10 and linear extrapolation to the 100 Hz for sea state 2 at Beaufort scale.
 
 ![Noise level vs Speed](/blog/snf_02.gif "Noise level vs Speed")
-**(a)**
+<p align="center"><b>(a)</b></p>
 
 ![Noise level vs Frequency](/blog/snf_03.gif "Noise level vs Frequency")
-**(b)**
+<p align="center"><b>(b)</b></p>
 
-**Figure 9.** Noise levels of a submarine (a) at different speeds and (b) frequencies [7].
+<p align="center"><b>Figure 9.</b> Noise levels of a submarine (a) at different speeds and (b) frequencies [7].</p>
 
 ![Noise spectrum](/blog/noise_spectrum.png "Noise spectrum")
-**Figure 10.** Noise spectrum level respect to the frequency [8].
+<p align="center"><b>Figure 10.</b> Noise spectrum level respect to the frequency [8].</p>
 
 In water, the transmission loss caused by both absorption of minerals and spreading of the acoustic wave and total transmission loss can be expressed with (13).
 
@@ -202,7 +208,7 @@ DI=AG=10 \, log{\frac{2L}{\lambda}}
 Using the (13) and (14) and assumptions above, relation between maximum detectable range and detection threshold shown in Figure 11 for 100, 500, 900 and 1300 Hz operating frequencies.
 
 ![Maximum range for passive sonar](/blog/passive_sonar_threshold.png "Maximum range for passive sonar")
-**Figure 11.** Maximum detectable range for different detection thresholds.
+<p align="center"><b>Figure 11.</b> Maximum detectable range for different detection thresholds.</p>
 
 #### Active Case
 
@@ -221,7 +227,7 @@ TS=20 \, log \frac{D^2}{4lr\_0} = 20 \, log \frac{57.3^2}{4 \times 3.41 \times 1
 where D is the length, l is the width of submarine and r\_0 is the reference distance. Using the same assumptions for noise level, directivity index and transmission loss in passive sonar case and source level is considered as 150 dB, maximum detectable ranges are calculated for different detection thresholds. Results are shown in Figure 12.
 
 ![Maximum range for active sonar](/blog/active_sonar_threshold.png "Maximum range for active sonar")
-**Figure 11.** Maximum detectable range for different detection thresholds.
+<p align="center"><b>Figure 12.</b> Maximum detectable range for different detection thresholds.</p>
 
 ### Discussion
 
