@@ -1,56 +1,71 @@
 ---
-title: "Demo Post 1"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-pubDate: "Sep 10 2022"
-heroImage: "/post_img.webp"
-tags: ["tokio"]
+title: "Cryptography"
+description: "Method for changing or making unreadable the data for security reasons when transmitting or storing"
+pubDate: "Jun 28 2020"
+heroImage: "/blog/aes_scheme.gif"
+tags: ["security", "encryption"]
 ---
+Cryptography is a method for changing or making unreadable the data for security reasons when transmitting or storing. Cryptography is an indispensable requirement for today's communication systems. There are several methods for encryption but cryptosystems can be grouped under the two main titles.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer
-malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas
-pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse
-platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada
-fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea
-dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst
-quisque sagittis purus sit amet.
+* Symmetric cryptosystems
+* Asymmetric cryptosystems
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum
-quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet.
-Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus.
-Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit
-ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt
-dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus
-arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed
-tempus urna et pharetra pharetra massa massa ultricies mi.
+Symmetric encryption systems use the same key to encrypt and decrypt data, while asymmetric systems use different keys. AES, Serpent, Twofish and Kuznyechick are the some of examples of symmetric cryptosystems, while some asymmetric cryptosystems are RSA and Elliptic Curve.
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam
-sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec.
-Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna
-fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et
-egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel
-turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra
-nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim
-praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus
-egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam
-ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor
-purus non. Amet dictum sit amet justo donec enim.
+### Rijndael
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut
-consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra.
-Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor
-dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor
-dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque
-eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices
-tincidunt arcu. Id cursus metus aliquam eleifend mi.
+Rijndael (known as AES) is a symmetric cryptosytem. Since it is symmetric, AES uses the same key for encryption and decryption and in most cases AES is a preferable secure and high performance solution due to the simplicity of mathematical operations.
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus
-imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu
-cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt
-dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat
-sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida.
-Egestas integer eget aliquet nibh praesent tristique magna.
+![Symmetric Encryption](/blog/aes_scheme.gif "AES Scheme")
+<p align="center">Source: https://rsec.kr/</p>
+
+You can find a comic style full explanation of AES encryption and decryption
+scheme from [here](http://www.moserware.com/2009/09/stick-figure-guide-to-advanced.html).
+
+### Rivest Shamir Adleman
+
+Rivest-Shamir-Adleman (RSA) is a widely used public-key cryptosystem. It's based on semi-prime numbers which are multiplication of two prime numbers. The prime numbers can be divided by only one and itself. Without prior knowledge about keys, revealing the numbers is a difficult factoring problem because of a typical RSA cryptosystem uses quite large numbers for keys.
+
+![Asymmetric Encryption](/blog/rsa_scheme.gif "RSA Scheme")
+
+A simple RSA algorithm uses two different prime numbers \(p\) and \(q\). The multiplication of these two numbers gives us a semi-prime number which is called *modulus* \(n\). Modulus determines the length of the cryptosystem. Using the additional two numbers which one is public exponent \(e\) and the other is private exponent \(d\) the cryptosystem is defined.
+
+\begin{equation}
+Public\ key = (e,n) \\
+Private\ key = (d,n)
+\end{equation}
+
+While encryption is achieved by using public exponent and modulus, for the decryption the user only needs to private exponent and modulus.
+
+\begin{equation}
+c = (m)^e \ mod\ n
+\end{equation}
+\begin{equation}
+m = (c)^d \ mod\ n
+\end{equation}
+
+### Elliptic Curve Cryptography
+
+Elliptic curve cryptography is a new approach to the public-key cryptosystems. Since RSA is getting weaker and weaker with increasing processing capabilities of the computers, elliptic curve will be more preferred cryptosystem. Elliptic curve cryptography is a based on a shape like below.
+
+![Curve Cryptosystem](/blog/curve_cryptography.gif "Curve Cryptosystem")
+<p align="center">Source: https://www.allaboutcircuits.com/</p>
+
+The plaintext message is converted to a point at the plane using the formula of this shape. For example, X coordinate of this point can be chosen equal to message and Y coordinate can be evaluated.
+
+\begin{equation}
+y^2=x^3+Ax+B\ (mod\ p)
+\end{equation}
+
+Let's assume the point holds the message is represented with \(M\), the ciphertext is formed by using \(C\_1\) and \(C\_2\) where \(r\) is a random number, \(G\) is the base point of the curve and \(K\) is the public key.
+
+\begin{equation}
+C\_1 = M + rK \\
+C\_2 = r\ G
+\end{equation}
+
+For decryption only \(C\_1\) and \(C\_2\) send to receiver and with private key \(k\) and using the equation below the message can be recovered.
+
+\begin{equation}
+M=C\_1-k\ C\_2
+\end{equation}

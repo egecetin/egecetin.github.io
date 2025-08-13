@@ -1,9 +1,0 @@
-Cryptography
-Kaleidoscope Library
-SONAR Principle
-Flank Array Sonar
-Underwater Noise by Weather
-Remote Sensing in Geology
-Signal Visualizer
-Source Localization
-Face-looking Image Recognition
