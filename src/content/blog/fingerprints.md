@@ -1,6 +1,6 @@
 ---
-title: "Two new papers—leaving fingerprints on science!"
-description: "Pareidolia raises and idea. If humans can recognize faces everywhere, can machines do the same?"
+title: "Two new papers — leaving fingerprints on science!"
+description: "Advancing the use of fine‑scale (so‑called “third level”) detail in forensic fingerprint examination"
 pubDate: "Sep 29 2023"
 tags: ["image processing", "hyperspectral imaging", "forensics"]
 badge: "academic"
