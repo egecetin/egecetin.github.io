@@ -58,8 +58,68 @@ const { title, description, image = "/social_img.webp", ogType = "website" } = A
 			displayMath: [['\\[', '\\]'], ['$$', '$$']],
 			processEscapes: true,
 			processEnvironments: true,
-			packages: {'[+]': ['ams']}
-		}
+			packages: { '[+]': ['ams'] }
+		},
+		// Defer automatic typesetting; we'll trigger it (and re-trigger after transitions)
+		startup: { typeset: false }
 	};
 </script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+
+<!-- Re-typeset MathJax after Astro view transitions / page loads -->
+<script is:inline>
+	function typesetMath() {
+		if (!window.MathJax) return;
+		const container = document.querySelector('article') || document.querySelector('main') || document.body;
+		// Reset equation numbering so it starts fresh per page
+		try {
+			if (window.MathJax.texReset) {
+				window.MathJax.texReset();
+			}
+			// Deep reset of tag counters (MathJax v3/v4 internal API - guarded)
+			const startup = window.MathJax.startup;
+			if (startup && startup.document && startup.document.inputJax && startup.document.inputJax[0]) {
+				const tags = startup.document.inputJax[0].parseOptions?.tags;
+				if (tags) {
+					tags.counter = 0;
+					if (typeof tags.all === 'object') {
+						for (const k of Object.keys(tags.all)) delete tags.all[k];
+					}
+				}
+			}
+		} catch (_) { /* non-fatal */ }
+		// v3/v4 style
+		if (window.MathJax.typesetPromise) {
+			// Clear prior state for partial re-render if available
+			if (window.MathJax.typesetClear) {
+				try { window.MathJax.typesetClear([container]); } catch (_) { /* noop */ }
+			}
+			window.MathJax.typesetPromise([container]).catch(err => console.error('MathJax typeset error', err));
+		} else if (window.MathJax.Hub && window.MathJax.Hub.Queue) { // v2 fallback
+			window.MathJax.Hub.Queue(["Typeset", window.MathJax.Hub, container]);
+		}
+	}
+
+	// Initial load (after script ready)
+	document.addEventListener('DOMContentLoaded', () => {
+		if (window.MathJax && window.MathJax.startup && window.MathJax.startup.promise) {
+			window.MathJax.startup.promise.then(typesetMath);
+		} else {
+			// Fallback retry loop if MathJax script still loading
+			let tries = 0;
+			const interval = setInterval(() => {
+				tries++;
+				if (window.MathJax && (window.MathJax.typesetPromise || (window.MathJax.Hub && window.MathJax.Hub.Queue))) {
+					clearInterval(interval);
+					typesetMath();
+				} else if (tries > 20) {
+					clearInterval(interval);
+				}
+			}, 150);
+		}
+	});
+
+	// Astro view transition events
+	document.addEventListener('astro:after-swap', typesetMath);
+	document.addEventListener('astro:page-load', typesetMath);
+</script>
