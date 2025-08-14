@@ -24,7 +24,7 @@ h\_{triangle}=min(\frac{w\_{image}}{2\;tan(\alpha / 2)}, h\_{image})
 \frac{w\_{triangle}}{2}=h\_{triangle}\;tan(\alpha / 2)
 \end{equation}
 
-All of the required properties of triangle is defined so what's next? Scaling and rotating them! For the library, I used a transformation map to hold these information since the source and destination pixels will be constant for the same resolution and number of rotations. So while the initialization function consumes more memory and processing time, on fly operations will be faster. Where \(\varphi\) is the rotation angle, the source and destination pixel coordinates are defined as,
+All of the required properties of triangle is defined so what's next? Scaling and rotating them! For the library, I used a transformation map to hold these information since the source and destination pixels will be constant for the same resolution and number of rotations. So while the initialization function consumes more memory and processing time, on fly operations will be faster. Where $\varphi$ is the rotation angle, the source and destination pixel coordinates are defined as,
 
 \begin{equation}
 x\_{dest}=x\;cos(\varphi) + y\;sin(\varphi)

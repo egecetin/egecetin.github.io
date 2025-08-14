@@ -28,7 +28,7 @@ Rivest-Shamir-Adleman (RSA) is a widely used public-key cryptosystem. It's based
 
 ![Asymmetric Encryption](/blog/rsa_scheme.gif "RSA Scheme")
 
-A simple RSA algorithm uses two different prime numbers \(p\) and \(q\). The multiplication of these two numbers gives us a semi-prime number which is called *modulus* \(n\). Modulus determines the length of the cryptosystem. Using the additional two numbers which one is public exponent \(e\) and the other is private exponent \(d\) the cryptosystem is defined.
+A simple RSA algorithm uses two different prime numbers $p$ and $q$. The multiplication of these two numbers gives us a semi-prime number which is called *modulus* $n$. Modulus determines the length of the cryptosystem. Using the additional two numbers which one is public exponent $e$ and the other is private exponent $d$ the cryptosystem is defined.
 
 \begin{equation}
 Public\ key = (e,n) \\
@@ -57,14 +57,14 @@ The plaintext message is converted to a point at the plane using the formula of 
 y^2=x^3+Ax+B\ (mod\ p)
 \end{equation}
 
-Let's assume the point holds the message is represented with \(M\), the ciphertext is formed by using \(C\_1\) and \(C\_2\) where \(r\) is a random number, \(G\) is the base point of the curve and \(K\) is the public key.
+Let's assume the point holds the message is represented with $M$, the ciphertext is formed by using $C\_1$ and $C\_2$ where $r$ is a random number, $G$ is the base point of the curve and $K$ is the public key.
 
 \begin{equation}
 C\_1 = M + rK \\
 C\_2 = r\ G
 \end{equation}
 
-For decryption only \(C\_1\) and \(C\_2\) send to receiver and with private key \(k\) and using the equation below the message can be recovered.
+For decryption only $C\_1$ and $C\_2$ send to receiver and with private key $k$ and using the equation below the message can be recovered.
 
 \begin{equation}
 M=C\_1-k\ C\_2

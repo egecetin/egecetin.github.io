@@ -59,17 +59,17 @@ Beamwidth is an indication of the directivity and beamwidth practically defined 
 \theta\_{3dB}=0.89 \frac{\lambda}{L}
 \end{equation}
 
-To calculate beamwidth of CORIS-5 manually and compare with MATLAB results, we need to define total length of array \(L\) and wavelength \(\lambda\). The total length of the array \(L\) is 23.5 m because in [1] the CORIS-5 flank array sonar consists 48 elements with equally 0.5 m spacing. Note that Dolphin class submarine has a 57.3 m hull and when the Figure 1 examined the length of the array is consistent. According to Nyquist's Theorem the array can only work on frequencies less than 2560 Hz since the sampling frequency of system is 5120 Hz.
+To calculate beamwidth of CORIS-5 manually and compare with MATLAB results, we need to define total length of array $L$ and wavelength $\lambda$. The total length of the array $L$ is 23.5 m because in [1] the CORIS-5 flank array sonar consists 48 elements with equally 0.5 m spacing. Note that Dolphin class submarine has a 57.3 m hull and when the Figure 1 examined the length of the array is consistent. According to Nyquist's Theorem the array can only work on frequencies less than 2560 Hz since the sampling frequency of system is 5120 Hz.
 
 \begin{equation}
 c=\lambda f
 \end{equation}
 
-Using the expression (2) and speed of sound at medium c equals to 1500 m/s, the wavelength \(\lambda\) can be evaluated. After that using the wavelength and array length, the beamwidth of the array can be determined with the expression (1). The beamwidths calculated for different center frequencies and result are given at Table 2. Additionally, the MATLAB phased array toolbox the directivity pattern plots can be seen in Figure 4 for verification.
+Using the expression (2) and speed of sound at medium c equals to 1500 m/s, the wavelength $\lambda$ can be evaluated. After that using the wavelength and array length, the beamwidth of the array can be determined with the expression (1). The beamwidths calculated for different center frequencies and result are given at Table 2. Additionally, the MATLAB phased array toolbox the directivity pattern plots can be seen in Figure 4 for verification.
 
 <p align="center"><b>Table 2.</b> Calculated 3dB Beamwidths</p>
 
-| Frequency (Hz) | 3dB Beamwidth (\(^\circ\)) |
+| Frequency (Hz) | 3dB Beamwidth ($^\circ$) |
 | --- | --- |
 | 100 | 32.548 |
 | 500 | 6.509 |
@@ -100,7 +100,7 @@ Limit distance is practically defined as the distance the when transmission loss
 TL\_{absorp}=\alpha r
 \end{equation}
 
-where \(\alpha\) equals,
+where $\alpha$ equals,
 
 \begin{equation}
 \alpha=\alpha\_2 + \alpha\_3 + \alpha\_4
@@ -115,7 +115,7 @@ where \(\alpha\) equals,
 \alpha\_4 = 1.1 \; 10^{-1} \frac{f\_4 \, (f/f\_4)^2}{1+(f/f\_4)^2}
 \end{equation}
 
-In the expressions above, \(S\) is the salinity in °/00, \(P\) is the pressure in atmosphere and \(f\_n\) is the relaxation frequency. The relaxation frequency (\(f\_n\)) values are dependent to relaxation time (\(\tau\)) or concentration of Boron and Magnesium Sulfate in the water. The calculation of relaxation time is given in (9) and (10).
+In the expressions above, $S$ is the salinity in °/00, $P$ is the pressure in atmosphere and $f\_n$ is the relaxation frequency. The relaxation frequency ($f\_n$) values are dependent to relaxation time ($\tau$) or concentration of Boron and Magnesium Sulfate in the water. The calculation of relaxation time is given in (9) and (10).
 
 \begin{equation}
 f\_n= \frac{1}{2\pi \tau\_n}
@@ -127,7 +127,7 @@ f\_n= \frac{1}{2\pi \tau\_n}
 \tau\_4 = 5.15 \; 10^{-7} \: e^{\frac{1590}{T+273}}
 \end{equation}
 
-During the calculations, salinity, temperature and depth are selected 36.5 \(^\circ\)/00, 20 \(^\circ\)C and 125 m respectively assuming the submarine at North Atlantic waters and compatible with dive limit of the submarine [2]. By using Figure 5 (b) and (11) the pressure at 125m,
+During the calculations, salinity, temperature and depth are selected 36.5 $^\circ$/00, 20 $^\circ$C and 125 m respectively assuming the submarine at North Atlantic waters and compatible with dive limit of the submarine [2]. By using Figure 5 (b) and (11) the pressure at 125m,
 
 \begin{equation}
 P=h \rho g = 125 \; 1026 \, \frac{9.81}{101325} = \; 12.4168 \, atm

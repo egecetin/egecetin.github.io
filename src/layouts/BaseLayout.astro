@@ -22,38 +22,6 @@ const {
   <head>
     <BaseHead title={title} description={description} image={image} , ogType={ogType} />
     {TRANSITION_API && <ViewTransitions />}
-
-    <!-- Google tag (gtag.js) -->
-    <script is:inline src="https://www.googletagmanager.com/gtag/js?id=G-1DEE29SPLT"></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("consent", "default", {
-        ad_storage: "denied",
-        ad_user_data: "denied",
-        ad_personalization: "denied",
-        analytics_storage: "denied",
-      });
-
-      gtag("config", "G-1DEE29SPLT");
-    </script>
-
-    <!-- MathJax -->
-    <script is:inline>
-      // MathJax configuration: enable automatic numbering of all display equations
-      window.MathJax = {
-        tex: {
-          tags: 'ams',
-          tagSide: 'right',
-          tagIndent: '0em'
-        }
-      };
-    </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
   </head>
   <body>
     <div class="bg-base-100 drawer lg:drawer-open">

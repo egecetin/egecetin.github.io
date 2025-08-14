@@ -7,7 +7,7 @@ tags: ["signal processing", "time difference of arrival", "localization"]
 ---
 Signals have different propagation speeds depending on their nature and environmental characteristics. As a result of propagation, every sensor (if their positions are different) will record delayed signals. Direction of arrival of the signal can be estimated by using these delays.
 
-The delay between two signals can be determined using the cross-correlation. The cross-correlation between two signals \(S\_1\) and \(S\_2\) described as (1). Maximum amplitude value of cross-correlation gives us the lag \((\Delta t)\) between two input signals.
+The delay between two signals can be determined using the cross-correlation. The cross-correlation between two signals $S\_1$ and $S\_2$ described as (1). Maximum amplitude value of cross-correlation gives us the lag $(\Delta t)$ between two input signals.
 
 \begin{equation}
 R\_{S\_1 S\_2} = \mathrm{E}[S\_1 S\_2^\*] = \int \int S\_1 S\_2 f\_{S\_1 S\_2}(S\_1,S\_2) dS\_1 dS\_2
@@ -16,7 +16,7 @@ R\_{S\_1 S\_2} = \mathrm{E}[S\_1 S\_2^\*] = \int \int S\_1 S\_2 f\_{S\_1 S\_2}(S
 ![Cross-correlation](/blog/crosscor.png "Cross-correlation")
 <p align="center">Cross-correaltion between two sinusoids.</p>
 
-As mentioned the time difference is related with propagation speed \((V)\) and distance so, if the propagation speed and time difference are known with (2) the difference of distance along the wave path \((\Delta x)\) can be found.
+As mentioned the time difference is related with propagation speed $(V)$ and distance so, if the propagation speed and time difference are known with (2) the difference of distance along the wave path $(\Delta x)$ can be found.
 
 \begin{equation}
 \Delta x=V\times \Delta t
@@ -25,7 +25,7 @@ As mentioned the time difference is related with propagation speed \((V)\) and d
 ![Localization 1](/blog/localization1.png "Localization 1")
 ![Localization 2](/blog/localization2.png "Localization 2")
 
-If we have limited number of sensors it is possible to couple them to estimate \(\Delta x\) distances and locate source. But if we have \(n\) sensors, calculation process will be more complex. To ease the process and obtain more generalized solution, distance from \(n\) sensors to source can be determined with \(n\) different equation. Assume we have identical three sensors and one signal source at \((x\_s,y\_s)\) distances from sensor can be defined by using three nonlinear equations.
+If we have limited number of sensors it is possible to couple them to estimate $\Delta x$ distances and locate source. But if we have $n$ sensors, calculation process will be more complex. To ease the process and obtain more generalized solution, distance from $n$ sensors to source can be determined with $n$ different equation. Assume we have identical three sensors and one signal source at $(x\_s,y\_s)$ distances from sensor can be defined by using three nonlinear equations.
 
 \begin{equation}
 \begin{split}
@@ -35,7 +35,7 @@ x\_s^2+y\_s^2=(r+b)^2 \\
 \end{split}
 \end{equation}
 
-This equation set can be solved by using Newton-Raphson method. With this method, coordinates of source \((x\_s,y\_s)\) estimated iteratively using Jacobian matrix (3).
+This equation set can be solved by using Newton-Raphson method. With this method, coordinates of source $(x\_s,y\_s)$ estimated iteratively using Jacobian matrix (3).
 
 \begin{equation}
 J=
