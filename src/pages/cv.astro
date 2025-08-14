@@ -81,7 +81,7 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     <div class="text-3xl w-full font-bold">Skills</div>
   </div>
 
-  <ul class="list-disc md:columns-5 columns-2 mx-6">
+  <ul class="list-disc md:columns-5 columns-2 mx-6 mb-10">
     <li>C</li>
     <li>C++</li>
     <li>CUDA</li>
@@ -93,4 +93,27 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     <li>Python</li>
     <li>Bash</li>
   </ul>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Publications</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Direct pore-based identification for fingerprint matching process"
+      subtitle="Turkish Journal of Electrical Engineering and Computer Sciences · Sep 29, 2023"
+    />
+    <TimeLineElement
+      title="Third Level Identification with Hyperspectral Imaging in Fingerprints"
+      subtitle="31st Signal Processing and Communications Applications Conference (SIU) · Jul 5, 2023"
+    />
+    <TimeLineElement
+      title="Investigation of the variability in the tool marks produced by modified blank firing pistols on fired 7.65 mm projectiles"
+      subtitle="Science & Justice · Jun 29, 2023"
+    />
+    <TimeLineElement
+      title="Face-looking Image Recognition"
+      subtitle="27th Signal Processing and Communications Applications Conference (SIU) · Apr 1, 2019"
+    />
+  </div>
 </BaseLayout>
