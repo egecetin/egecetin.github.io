@@ -10,7 +10,6 @@ application you can monitorize real-time data from supported National Instrument
 converters. Additionally by using GPS functionality you can synchronize your data while recording.
 
 ![Visualizer Init](/blog/visualizer_init.png "Visualizer Init")
-![Visualizer](/blog/visualizer.png "Visualizer")
 
 You can download and try this software from following link (Non-commercial use only).
 
