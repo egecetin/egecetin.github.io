@@ -1,3 +1,9 @@
 .time-line-container>div:last-child .education__time>.education__line {
     display: none;
 }
+
+/* Justify normal markdown paragraphs, but don't override explicit alignment utilities or legacy align attribute. */
+.prose :where(p:not(.text-center,.text-right,.text-left,[align])) {
+    text-align: justify;
+    text-justify: inter-word;
+}
