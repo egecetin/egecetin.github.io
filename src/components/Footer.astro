@@ -1,17 +1,14 @@
 ---
 const today = new Date();
+import RandomQuote from './RandomQuote.astro';
 ---
 
 <footer class="footer footer-center block mb-5 pt-10">
   <div class="pb-2">
     &copy; {today.getFullYear()} Ege Çetin
   </div>
-  <div class="inline opacity-75">
-    Dream no small dream. It lacks magic. Dream large. Then make the dream real.
-  </div>
-  <br>
-  <div class="inline opacity-75">
-    <b>Donald Douglas</b>
+  <div class="inline opacity-75 text-center">
+  <RandomQuote interval={15000} />
   </div>
 </footer>
 <style></style>

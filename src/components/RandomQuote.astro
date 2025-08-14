@@ -1,0 +1,42 @@
+---
+// RandomQuote.astro
+// Picks a random non-empty line from quotes.txt on initial load (SSR) and optionally rotates client-side.
+// Props:
+//  - interval (number | undefined): milliseconds between rotations. Omit or set 0/undefined to disable.
+//  - tag (string): HTML tag to wrap the quote (default 'div').
+interface Props {
+  interval?: number; // ms between rotations; 0/undefined disables
+  tag?: string;
+}
+const { interval, tag = 'div' } = Astro.props as Props;
+import rawQuotes from '/quotes.txt?raw';
+const lines = rawQuotes
+  .split(/\r?\n/)
+  .map(l => l.trim())
+  .filter(Boolean);
+// Parse lines of form: quote (Author)
+interface Entry { text: string; author: string; }
+const entries: Entry[] = lines.map(l => {
+  const m = l.match(/^(.*)\(([^()]*)\)\s*$/); // last parentheses group
+  if (m) {
+    return { text: m[1].trim().replace(/[-–—]\s*$/, '').trim(), author: m[2].trim() };
+  }
+  return { text: l, author: '' };
+});
+const initial = entries[Math.floor(Math.random() * entries.length)] ?? { text: '', author: '' };
+const Tag = tag as any;
+let scriptContent: string | null = null;
+if (interval && interval > 0) {
+  scriptContent = `(()=>{const entries=${JSON.stringify(entries)};const intervalMs=${interval};const root=document.currentScript&&document.currentScript.previousElementSibling; if(!root) return; const quoteSpan=root.querySelector('.quote-text'); const authorEl=root.querySelector('.quote-author'); function pick(){const ent=entries[Math.floor(Math.random()*entries.length)]; if(quoteSpan) quoteSpan.textContent=ent.text; if(authorEl){ if(ent.author){authorEl.textContent=ent.author; authorEl.style.display='inline';} else {authorEl.textContent=''; authorEl.style.display='none';}}} setInterval(pick, intervalMs);})();`;
+}
+---
+<Tag class={"random-quote"} aria-live={interval ? 'polite' : undefined}>
+  <span class="quote-text">{initial.text}</span><br />
+  {initial.author && <b class="quote-author">{initial.author}</b>}
+</Tag>
+{scriptContent && <script set:html={scriptContent} />}
+<style>
+  .random-quote { }
+  .quote-text { }
+  .quote-author { }
+</style>
