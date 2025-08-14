@@ -1,0 +1,42 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+---
+
+<BaseLayout title="Projects" sideBarActiveItemID="projects">
+  <div>
+    <div class="text-3xl w-full font-bold mb-5">Projects Header</div>
+    <div
+      class="mt-2 mb-3 h-px bg-[linear-gradient(to_right,rgba(0,0,0,0.45),transparent)] dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.35),transparent)]"
+    >
+    </div>
+  </div>
+
+  <HorizontalCard
+    title="Repo Initializer"
+    img="https://github.com/egecetin/Repo-Init/raw/master/doc/logo.png"
+    desc="Modern C++ project template with enterprise-grade integrations"
+    url="https://github.com/egecetin/Repo-Init"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="PcapPlusPlus"
+    img="https://pcapplusplus.github.io/img/logo/logo_color.png"
+    desc="Colloborator at a high-performance network packet processing library"
+    url="https://pcapplusplus.github.io/"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="LibKaleidoscope"
+    img="https://github.com/egecetin/libKaleidoscope/raw/master/doc/images/logo-white.png"
+    desc="High-performance kaleidoscope effects for real-time applications"
+    url="https://github.com/egecetin/libKaleidoscope"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Video Stabilization"
+    img="https://github.com/egecetin/VideoStabilization/raw/5e763872012221003875c2401f425dde4ac3c99a/resource/sample.gif"
+    desc="Real-time environmental shake elimination with enhanced video processing"
+    url="https://github.com/egecetin/VideoStabilization"
+  />
+</BaseLayout>

@@ -1,6 +1,5 @@
 [files]
 extend-exclude = [
-                    "js",
                     "codespell-ignore-list.txt"
                  ]
 

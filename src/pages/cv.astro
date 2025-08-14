@@ -1,0 +1,119 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="Resume" sideBarActiveItemID="cv">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Ege Çetin</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    A graduate of Istanbul Technical University in Electronics and Communication Engineering, currently contributing to
+    Pavotek's Data Networks team as a Software Design Engineer. Core competencies include C/C++ development for
+    real-time data packet analysis, advanced protocol processing, and inter-process communication design leveraging
+    ZeroMQ and web sockets. Proficient in implementing parallel computing solutions with CUDA and utilizing CMake as a
+    build system for managing complex software projects in Git.
+  </div>
+
+  <div class="mb-10 text-justify">
+    Working with the team at Pavotek to develop efficient systems for handling complex data processing tasks,
+    prioritizing performance and scalability. Motivated by solving challenging technical problems and fostering
+    innovation, aiming to contribute meaningful solutions while collaborating in dynamic and inclusive environments.
+    Because after all, the only ones who fly are the ones who dare to try.
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="Istanbul Technical University (2015 - 2019)"
+      subtitle="Bachelor's Degree in Electronics and Communication Engineering (GPA: 3.34/4.00)"
+      image="/cv/ITU.png"
+    />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Experience</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Software Design Engineer"
+      subtitle="From Sep 2020 to present at Pavotek"
+      image="/cv/Pavotek_Logo.png"
+    >
+      Working as a Software Design Engineer in the Data Networks team. My responsibilities include developing C++
+      software for recording raw data packets and performing real-time analysis, including parsing and crafting various
+      protocol layers and handling payload encoding/decoding. I design solutions for efficient inter-process
+      communication using ZeroMQ and manage data storage with Elasticsearch and Redis, primarily on RedHat-based
+      systems. Additionally, I have implemented high-performance parallel algorithms using CUDA to accelerate
+      computationally intensive data processing tasks related to advanced protocol processing while using CMake as a
+      build system.
+    </TimeLineElement>
+    <TimeLineElement
+      title="R&D Software Development Specialist"
+      subtitle="From May 2019 to Aug 2020 at ArtGe Technologies"
+      image="/cv/ArtGe_Logo.png"
+    >
+      Developed a face detection and recognition application featuring a user-friendly interface using Qt and conducted
+      research on source detection and localization techniques for hydrophone and geophone arrays while implementing
+      these methods in MATLAB and with Intel IPP/MKL libraries with C/C++.
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Certifications</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+    <li>
+      <p>T-BOSIET - Enertech Qatar</p>
+    </li>
+    <li>
+      <p>AS9100-D - Defne Muhendislik</p>
+    </li>
+  </ul>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Skills</div>
+  </div>
+
+  <ul class="list-disc md:columns-5 columns-2 mx-6 mb-10">
+    <li>C</li>
+    <li>C++</li>
+    <li>CUDA</li>
+    <li>CMake</li>
+    <li>Git</li>
+    <li>Subversion</li>
+    <li>Docker</li>
+    <li>MATLAB</li>
+    <li>Python</li>
+    <li>Bash</li>
+  </ul>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Publications</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Direct pore-based identification for fingerprint matching process"
+      subtitle="Turkish Journal of Electrical Engineering and Computer Sciences · Sep 29, 2023"
+    />
+    <TimeLineElement
+      title="Third Level Identification with Hyperspectral Imaging in Fingerprints"
+      subtitle="31st Signal Processing and Communications Applications Conference (SIU) · Jul 5, 2023"
+    />
+    <TimeLineElement
+      title="Investigation of the variability in the tool marks produced by modified blank firing pistols on fired 7.65 mm projectiles"
+      subtitle="Science & Justice · Jun 29, 2023"
+    />
+    <TimeLineElement
+      title="Face-looking Image Recognition"
+      subtitle="27th Signal Processing and Communications Applications Conference (SIU) · Apr 1, 2019"
+    />
+  </div>
+</BaseLayout>

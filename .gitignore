@@ -1,0 +1,7 @@
+.venv
+.astro/
+.env
+.cache
+.env.production
+
+node_modules
