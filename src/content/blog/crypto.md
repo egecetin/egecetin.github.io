@@ -2,7 +2,7 @@
 title: "Cryptography"
 description: "Method for changing or making unreadable the data for security reasons when transmitting or storing"
 pubDate: "Jun 28 2020"
-heroImage: "/blog/aes_scheme.gif"
+heroImage: "/blog/aes_scheme.png"
 tags: ["security", "encryption"]
 ---
 Cryptography is a method for changing or making unreadable the data for security reasons when transmitting or storing. Cryptography is an indispensable requirement for today's communication systems. There are several methods for encryption but cryptosystems can be grouped under the two main titles.
@@ -16,7 +16,7 @@ Symmetric encryption systems use the same key to encrypt and decrypt data, while
 
 Rijndael (known as AES) is a symmetric cryptosytem. Since it is symmetric, AES uses the same key for encryption and decryption and in most cases AES is a preferable secure and high performance solution due to the simplicity of mathematical operations.
 
-![Symmetric Encryption](/blog/aes_scheme.gif "AES Scheme")
+![Symmetric Encryption](/blog/aes_scheme.png "AES Scheme")
 <p align="center">Source: https://rsec.kr/</p>
 
 You can find a comic style full explanation of AES encryption and decryption
@@ -26,7 +26,7 @@ scheme from [here](http://www.moserware.com/2009/09/stick-figure-guide-to-advanc
 
 Rivest-Shamir-Adleman (RSA) is a widely used public-key cryptosystem. It's based on semi-prime numbers which are multiplication of two prime numbers. The prime numbers can be divided by only one and itself. Without prior knowledge about keys, revealing the numbers is a difficult factoring problem because of a typical RSA cryptosystem uses quite large numbers for keys.
 
-![Asymmetric Encryption](/blog/rsa_scheme.gif "RSA Scheme")
+![Asymmetric Encryption](/blog/rsa_scheme.png "RSA Scheme")
 
 A simple RSA algorithm uses two different prime numbers $p$ and $q$. The multiplication of these two numbers gives us a semi-prime number which is called *modulus* $n$. Modulus determines the length of the cryptosystem. Using the additional two numbers which one is public exponent $e$ and the other is private exponent $d$ the cryptosystem is defined.
 
