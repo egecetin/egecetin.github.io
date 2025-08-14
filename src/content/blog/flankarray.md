@@ -106,13 +106,13 @@ where $\alpha$ equals,
 \alpha=\alpha\_2 + \alpha\_3 + \alpha\_4
 \end{equation}
 \begin{equation}
-\alpha\_2 = 2.94 \; 10^{-2} \frac{f^2}{f\_3}
+\alpha\_2 = 2.94 \  10^{-2} \frac{f^2}{f\_3}
 \end{equation}
 \begin{equation}
-\alpha\_3 = 2.03 \; 10^{-2} S(1-6.54 \; 10^{-4} \; P) \frac{f\_3 \, (f/f\_3)^2}{1+(f/f\_3)^2}
+\alpha\_3 = 2.03 \  10^{-2} S(1-6.54 \  10^{-4} \  P) \frac{f\_3 \, (f/f\_3)^2}{1+(f/f\_3)^2}
 \end{equation}
 \begin{equation}
-\alpha\_4 = 1.1 \; 10^{-1} \frac{f\_4 \, (f/f\_4)^2}{1+(f/f\_4)^2}
+\alpha\_4 = 1.1 \  10^{-1} \frac{f\_4 \, (f/f\_4)^2}{1+(f/f\_4)^2}
 \end{equation}
 
 In the expressions above, $S$ is the salinity in °/00, $P$ is the pressure in atmosphere and $f\_n$ is the relaxation frequency. The relaxation frequency ($f\_n$) values are dependent to relaxation time ($\tau$) or concentration of Boron and Magnesium Sulfate in the water. The calculation of relaxation time is given in (9) and (10).
@@ -121,16 +121,16 @@ In the expressions above, $S$ is the salinity in °/00, $P$ is the pressure in a
 f\_n= \frac{1}{2\pi \tau\_n}
 \end{equation}
 \begin{equation}
-\tau\_3 = 7.27 \; 10^{-12} \: e^{\frac{3500}{T+273}}
+\tau\_3 = 7.27 \  10^{-12} \: e^{\frac{3500}{T+273}}
 \end{equation}
 \begin{equation}
-\tau\_4 = 5.15 \; 10^{-7} \: e^{\frac{1590}{T+273}}
+\tau\_4 = 5.15 \  10^{-7} \: e^{\frac{1590}{T+273}}
 \end{equation}
 
 During the calculations, salinity, temperature and depth are selected 36.5 $^\circ$/00, 20 $^\circ$C and 125 m respectively assuming the submarine at North Atlantic waters and compatible with dive limit of the submarine [2]. By using Figure 5 (b) and (11) the pressure at 125m,
 
 \begin{equation}
-P=h \rho g = 125 \; 1026 \, \frac{9.81}{101325} = \; 12.4168 \, atm
+P=h \rho g = 125 \  1026 \, \frac{9.81}{101325} = \  12.4168 \, atm
 \end{equation}
 
 ![Mean Salinity](/blog/mean_salinity_2005.jpg "Mean salinity")
