@@ -2,7 +2,7 @@
 title: "Kaleidoscope effect"
 description: "What is the observation of beautiful forms? A Kaleidoscope!"
 pubDate: "May 21 2023"
-heroImage: "/blog/kaleidoscope-white.png"
+heroImage: "/blog/ac-synin-out.png"
 tags: ["image processing"]
 ---
 Kaleidoscope is derived from Ancient Greek and it means *observation of beautiful forms* according to Wikipedia [[1]](https://en.wikipedia.org/wiki/Kaleidoscope). But what is this effect and how  his effect is generated? First of all take a look at the logo above. Did you see the hexagons replacing the "o" characters? This is the simplest example of kaleidoscope effect for a triangle. Simply you are rotating and concataneting the triangles to form a hexagon shape. So this is a kaleidoscope image of a triangle with six rotations. See the image below.
