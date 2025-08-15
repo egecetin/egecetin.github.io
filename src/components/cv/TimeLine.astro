@@ -13,11 +13,13 @@ const { title, subtitle, image } = Astro.props;
         <h3 class="font-semibold mb-1">{title}</h3>
         <span class="font-light text-sm">{subtitle}</span>
       </div>
-      {image && (
-        <div class="flex-shrink-0">
-          <img src={image} alt={title} class="w-32 h-12 object-contain" loading="lazy"/>
-        </div>
-      )}
+      {
+        image && (
+          <div class="flex-shrink-0">
+            <img src={image} alt={title} class="w-32 h-12 object-contain" loading="lazy" />
+          </div>
+        )
+      }
     </div>
     <p class="my-2 text-justify">
       <slot />
